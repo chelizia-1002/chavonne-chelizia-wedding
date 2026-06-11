@@ -1,9 +1,5 @@
 # Chavonne & Chelizia Wedding Website
 
-GitHub Pages ready.
+Updated with the latest supplied photos only, corrected RSVP email, improved gallery order, and image-fit settings so faces/heads are not cut off.
 
-Important upload instruction:
-Upload the CONTENTS of this folder to the repository root, not the folder itself.
-The repository must have index.html, styles.css, script.js and the assets folder directly on the main page.
-
-RSVP email is set to: cheliziavdw@gmail.com
+Upload all files in this ZIP to the root of your GitHub repository.
