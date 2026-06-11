@@ -1,5 +1,5 @@
 # Chavonne & Chelizia Wedding Website
 
-Updated with the latest supplied photos only, corrected RSVP email, improved gallery order, and image-fit settings so faces/heads are not cut off.
+Updated version with the new high-resolution image set, family banner replacement, fixed RSVP email, and image-fit fixes to prevent cropped heads.
 
-Upload all files in this ZIP to the root of your GitHub repository.
+Upload all files in this folder to the GitHub repository root and commit changes.
