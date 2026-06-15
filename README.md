@@ -1,5 +1,11 @@
-# Chavonne & Chelizia Wedding Website
+# Chavonne & Chelizia Wedding Website Update
 
-Updated version with the new high-resolution image set, family banner replacement, fixed RSVP email, and image-fit fixes to prevent cropped heads.
+Upload all files and folders in this package to the root of your GitHub repository.
 
-Upload all files in this folder to the GitHub repository root and commit changes.
+Includes:
+- Updated `index.html`
+- Nature background videos in `assets/videos/`
+- Wedding palette image in `assets/photos/`
+- Prayer section
+- Gift note section
+- Story gallery and family banner
