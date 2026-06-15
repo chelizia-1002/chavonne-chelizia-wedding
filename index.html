@@ -12,6 +12,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* FINAL GALLERY POLISH: black & white images + soft botanical vine dividers */
+    #gallery .masonry img {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+
+    .vine-divider {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 18px auto 26px;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .vine-divider svg {
+      width: min(420px, 70vw);
+      height: auto;
+      display: block;
+    }
+
+    .vine-divider.flip svg {
+      transform: scaleX(-1);
+    }
+
+    .vine-divider path,
+    .vine-divider ellipse {
+      stroke: #9CA883;
+    }
+
+    .vine-divider .leaf-fill {
+      fill: rgba(156, 168, 131, 0.08);
+    }
+  </style>
 </head>
 <body>
   <div class="grain"></div>
@@ -204,13 +240,64 @@
         <img src="assets/photos/photo-01.jpg" alt="Chavonne and Chelizia" />
         <img src="assets/photos/photo-02.jpg" alt="Chavonne and Chelizia" />
         <img src="assets/photos/photo-03.jpg" alt="Chavonne and Chelizia" />
+        <div class="vine-divider" aria-hidden="true">
+          <svg viewBox="0 0 520 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 112 C100 56, 146 82, 212 40 C276 -1, 330 50, 490 18" stroke-width="5" stroke-linecap="round"/>
+            <ellipse class="leaf-fill" cx="116" cy="67" rx="16" ry="44" transform="rotate(46 116 67)"/>
+            <path d="M89 94 C101 56, 120 39, 151 32 C151 72, 126 91, 89 94Z" stroke-width="4"/>
+            <path d="M111 85 C119 65, 128 54, 146 39" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="243" cy="31" rx="14" ry="39" transform="rotate(38 243 31)"/>
+            <path d="M220 61 C224 28, 239 10, 269 2 C273 34, 254 54, 220 61Z" stroke-width="4"/>
+            <path d="M234 51 C241 32, 250 20, 266 7" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="351" cy="43" rx="14" ry="39" transform="rotate(101 351 43)"/>
+            <path d="M310 44 C340 27, 367 29, 398 50 C363 69, 336 63, 310 44Z" stroke-width="4"/>
+            <path d="M323 45 C344 44, 365 47, 391 50" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="443" cy="24" rx="13" ry="36" transform="rotate(48 443 24)"/>
+            <path d="M421 48 C426 18, 441 2, 469 -4 C472 26, 451 45, 421 48Z" stroke-width="4"/>
+            <path d="M433 40 C440 22, 449 11, 465 0" stroke-width="3"/>
+          </svg>
+        </div>
         <img src="assets/photos/photo-04.jpg" alt="Chavonne and Chelizia" />
         <img src="assets/photos/photo-05.jpg" alt="Chavonne and Chelizia" />
         <img src="assets/photos/photo-06.jpg" alt="Chavonne and Chelizia" />
         <img src="assets/photos/photo-07.jpg" alt="Chavonne and Chelizia" />
+        <div class="vine-divider flip" aria-hidden="true">
+          <svg viewBox="0 0 520 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 112 C100 56, 146 82, 212 40 C276 -1, 330 50, 490 18" stroke-width="5" stroke-linecap="round"/>
+            <ellipse class="leaf-fill" cx="116" cy="67" rx="16" ry="44" transform="rotate(46 116 67)"/>
+            <path d="M89 94 C101 56, 120 39, 151 32 C151 72, 126 91, 89 94Z" stroke-width="4"/>
+            <path d="M111 85 C119 65, 128 54, 146 39" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="243" cy="31" rx="14" ry="39" transform="rotate(38 243 31)"/>
+            <path d="M220 61 C224 28, 239 10, 269 2 C273 34, 254 54, 220 61Z" stroke-width="4"/>
+            <path d="M234 51 C241 32, 250 20, 266 7" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="351" cy="43" rx="14" ry="39" transform="rotate(101 351 43)"/>
+            <path d="M310 44 C340 27, 367 29, 398 50 C363 69, 336 63, 310 44Z" stroke-width="4"/>
+            <path d="M323 45 C344 44, 365 47, 391 50" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="443" cy="24" rx="13" ry="36" transform="rotate(48 443 24)"/>
+            <path d="M421 48 C426 18, 441 2, 469 -4 C472 26, 451 45, 421 48Z" stroke-width="4"/>
+            <path d="M433 40 C440 22, 449 11, 465 0" stroke-width="3"/>
+          </svg>
+        </div>
         <img src="assets/photos/photo-08.jpg" alt="Family photo" />
         <img src="assets/photos/photo-09.jpg" alt="Family photo" />
         <img src="assets/photos/photo-10.jpg" alt="Kai and Willow" />
+        <div class="vine-divider" aria-hidden="true">
+          <svg viewBox="0 0 520 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 112 C100 56, 146 82, 212 40 C276 -1, 330 50, 490 18" stroke-width="5" stroke-linecap="round"/>
+            <ellipse class="leaf-fill" cx="116" cy="67" rx="16" ry="44" transform="rotate(46 116 67)"/>
+            <path d="M89 94 C101 56, 120 39, 151 32 C151 72, 126 91, 89 94Z" stroke-width="4"/>
+            <path d="M111 85 C119 65, 128 54, 146 39" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="243" cy="31" rx="14" ry="39" transform="rotate(38 243 31)"/>
+            <path d="M220 61 C224 28, 239 10, 269 2 C273 34, 254 54, 220 61Z" stroke-width="4"/>
+            <path d="M234 51 C241 32, 250 20, 266 7" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="351" cy="43" rx="14" ry="39" transform="rotate(101 351 43)"/>
+            <path d="M310 44 C340 27, 367 29, 398 50 C363 69, 336 63, 310 44Z" stroke-width="4"/>
+            <path d="M323 45 C344 44, 365 47, 391 50" stroke-width="3"/>
+            <ellipse class="leaf-fill" cx="443" cy="24" rx="13" ry="36" transform="rotate(48 443 24)"/>
+            <path d="M421 48 C426 18, 441 2, 469 -4 C472 26, 451 45, 421 48Z" stroke-width="4"/>
+            <path d="M433 40 C440 22, 449 11, 465 0" stroke-width="3"/>
+          </svg>
+        </div>
       </div>
     </section>
 
