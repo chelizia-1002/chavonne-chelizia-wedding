@@ -355,3 +355,30 @@ a{color:inherit;text-decoration:none} img{max-width:100%;display:block}.grain{po
   .palette-card { width: 96vw; padding: 10px; }
   .video-bg { opacity: .2; }
 }
+
+
+/* Bianca requested updates */
+.accommodation {
+  position: relative;
+  overflow: hidden;
+  background: #10120d;
+  color: #fff;
+}
+.accommodation .section-head, .accommodation .cards {
+  position: relative;
+  z-index: 2;
+}
+.accommodation .section-head h2 { color: #fff; }
+.accommodation .section-head p, .accommodation .eyebrow { color: var(--sage); }
+.accommodation .cards article {
+  background: rgba(255,255,255,.92);
+  color: #111;
+  backdrop-filter: blur(6px);
+}
+.stay-video { opacity: .28; filter: grayscale(.25) contrast(1.05); }
+.soft-dark-overlay {
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55));
+}
+.story-polaroid { padding-bottom: 16px; }
+.story-polaroid span { display:none !important; }

@@ -1,11 +1,9 @@
 # Chavonne & Chelizia Wedding Website Update
 
-Upload all files and folders in this package to the root of your GitHub repository.
+Upload all files and folders in this ZIP to the root of your GitHub repository.
 
-Includes:
-- Updated `index.html`
-- Nature background videos in `assets/videos/`
-- Wedding palette image in `assets/photos/`
-- Prayer section
-- Gift note section
-- Story gallery and family banner
+Updates included:
+- Wedding palette moved below the gift note section.
+- Extra typed captions removed from the story images.
+- Gallery heading changed to “This is us.”
+- Nature 2 video added behind the Places to Stay / Accommodation section.
