@@ -382,3 +382,9 @@ a{color:inherit;text-decoration:none} img{max-width:100%;display:block}.grain{po
 }
 .story-polaroid { padding-bottom: 16px; }
 .story-polaroid span { display:none !important; }
+
+/* Final true clean backup */
+#story,#family,section[id*='before']{background:#000!important;background-image:none!important}
+#gallery img,section[id*='gallery'] img,.gallery img,.this-is-us img{filter:grayscale(100%) contrast(1.05)!important}
+.cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}.cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
+.family-banner-img{width:100%!important;height:auto!important;display:block!important;filter:grayscale(100%) contrast(1.05)!important}
