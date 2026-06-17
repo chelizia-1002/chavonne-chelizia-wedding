@@ -37,164 +37,172 @@
 
 
 
-<style id="rsvp-box-frame-fix">
-/* 1. Make A Small RSVP Note match the Gifts section box/card style */
-#rsvp-note.rsvp-note-section,
-.rsvp-note-section {
-  background:
-    radial-gradient(circle at 8% 82%, rgba(185,202,154,.16), transparent 7%),
-    radial-gradient(circle at 91% 12%, rgba(185,202,154,.13), transparent 7%),
-    linear-gradient(180deg, #f4f1e9 0%, #eee9df 100%) !important;
-  color:#111 !important;
-  padding:90px 18px !important;
-  text-align:center !important;
+
+
+
+<style id="restore-forever-photos">
+html,body{max-width:100%!important;overflow-x:hidden!important}
+img{max-width:100%;}
+
+/* 1. Centre all images properly on mobile */
+@media (max-width:760px){
+  img, figure img, .gallery img, .story-grid img, .photo-frame img, .story-frame img{
+    display:block!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    object-position:center center!important;
+  }
+  figure,.photo-frame,.story-frame,.gallery-card,.story-card{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
 }
 
-#rsvp-note .rsvp-note-card,
-.rsvp-note-card {
-  max-width:1080px !important;
-  margin:0 auto !important;
-  padding:56px clamp(24px, 6vw, 86px) !important;
-  background:#fff !important;
-  color:#111 !important;
-  border:1px solid rgba(0,0,0,.12) !important;
-  box-shadow:0 22px 65px rgba(0,0,0,.16) !important;
+/* 2. Restore Our Forever Began section photo composition */
+#story{
+  position:relative!important;
+  background:#050505!important;
+  background-image:
+    radial-gradient(circle at 8% 46%, rgba(185,202,154,.14), transparent 9%),
+    radial-gradient(circle at 94% 70%, rgba(185,202,154,.14), transparent 9%),
+    linear-gradient(90deg,#050505 0%,#060606 100%)!important;
+  color:#fff!important;
+  overflow:hidden!important;
 }
 
-#rsvp-note .eyebrow,
-.rsvp-note-card .eyebrow {
-  color:#9ca785 !important;
-  font-family:Montserrat, Arial, sans-serif !important;
-  font-size:13px !important;
-  font-weight:800 !important;
-  letter-spacing:.33em !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  margin-bottom:16px !important;
+#story .split{
+  display:grid!important;
+  grid-template-columns:minmax(420px, .9fr) minmax(520px, 1fr)!important;
+  gap:56px!important;
+  align-items:center!important;
 }
 
-#rsvp-note h2,
-.rsvp-note-card h2 {
-  font-family:'Playfair Display', Georgia, serif !important;
-  color:#050505 !important;
-  text-transform:uppercase !important;
-  text-align:center !important;
-  font-size:clamp(38px, 6vw, 78px) !important;
-  line-height:1.02 !important;
-  margin:0 0 34px !important;
-  font-weight:900 !important;
+#story .forever-photos-restored{
+  position:relative!important;
+  width:100%!important;
+  height:min(72vh,680px)!important;
+  min-height:520px!important;
+  display:block!important;
+  z-index:2!important;
 }
 
-#rsvp-note p,
-#rsvp-note li,
-.rsvp-note-card p,
-.rsvp-note-card li {
-  color:#111 !important;
-  font-family:Montserrat, Arial, sans-serif !important;
-  font-size:clamp(16px, 1.45vw, 20px) !important;
-  line-height:1.78 !important;
-  font-weight:500 !important;
-  text-align:center !important;
+#story .forever-frame{
+  position:absolute!important;
+  margin:0!important;
+  overflow:hidden!important;
+  border:1px solid rgba(255,255,255,.23)!important;
+  background:rgba(0,0,0,.3)!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.38)!important;
 }
 
-#rsvp-note ul,
-.rsvp-note-card ul {
-  list-style-position:inside !important;
-  padding-left:0 !important;
-  margin:10px auto 22px !important;
+#story .forever-frame img{
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  filter:grayscale(100%) contrast(1.05)!important;
 }
 
-#rsvp-note .rsvp-note-signoff,
-.rsvp-note-card .rsvp-note-signoff {
-  font-family:'Great Vibes', cursive !important;
-  color:#9ca785 !important;
-  font-size:clamp(38px, 5.5vw, 64px) !important;
-  line-height:1.08 !important;
-  margin-top:30px !important;
-  text-align:center !important;
+#story .forever-frame-back{
+  width:48%!important;
+  height:76%!important;
+  right:0!important;
+  top:0!important;
+  z-index:1!important;
 }
 
-/* 2. Fix Our Forever Began image frames: two full frames, no face cut-offs */
+#story .forever-frame-front{
+  width:68%!important;
+  height:66%!important;
+  left:0!important;
+  bottom:0!important;
+  z-index:2!important;
+}
+
+/* Hide any older broken empty line/frame holders */
 #story .overlap-photos,
 #story .photo-composition,
 #story .photo-stack,
-#story .story-photos,
-#forever .overlap-photos,
-#forever .photo-composition,
-#forever .photo-stack,
-#forever .story-photos {
-  display:grid !important;
-  grid-template-columns:1fr 1fr !important;
-  gap:22px !important;
-  align-items:stretch !important;
-  height:auto !important;
-  min-height:0 !important;
+#story .story-photos{
+  display:none!important;
 }
 
-#story .overlap-photos figure,
-#story .photo-composition figure,
-#story .photo-stack figure,
-#story .story-photos figure,
-#story .photo-frame,
-#story .story-frame,
-#forever .overlap-photos figure,
-#forever .photo-composition figure,
-#forever .photo-stack figure,
-#forever .story-photos figure,
-#forever .photo-frame,
-#forever .story-frame {
-  position:relative !important;
-  inset:auto !important;
-  width:100% !important;
-  height:auto !important;
-  aspect-ratio:4/5 !important;
-  overflow:hidden !important;
-  margin:0 !important;
-  border:1px solid rgba(255,255,255,.22) !important;
-  background:#0b0b0b !important;
+/* White and sage C&C logo */
+.cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}
+.cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
+#story .script,#story .story-logo,#story .lower-logo,#story .logo-large{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+#story .cc-green,.script .cc-green,.story-logo .cc-green{
+  color:#b9ca9a!important;
+  -webkit-text-fill-color:#b9ca9a!important;
 }
 
-#story img,
-#forever img,
-section[id*="forever"] img {
-  width:100% !important;
-  height:100% !important;
-  object-fit:cover !important;
-  object-position:center center !important;
-  display:block !important;
-  filter:grayscale(100%) contrast(1.05) !important;
+/* RSVP note text box retained */
+#rsvp-note.rsvp-note-section,.rsvp-note-section{
+  background:linear-gradient(180deg,#f4f1e9 0%,#eee9df 100%)!important;
+  color:#111!important;
+  padding:90px 18px!important;
+  text-align:center!important;
+}
+#rsvp-note .rsvp-note-card,.rsvp-note-card{
+  max-width:1080px!important;
+  margin:0 auto!important;
+  padding:56px clamp(24px,6vw,86px)!important;
+  background:#fff!important;
+  color:#111!important;
+  border:1px solid rgba(0,0,0,.12)!important;
+  box-shadow:0 22px 65px rgba(0,0,0,.16)!important;
+}
+#rsvp-note h2,.rsvp-note-card h2{
+  font-family:'Playfair Display',Georgia,serif!important;
+  color:#050505!important;
+  text-transform:uppercase!important;
+  font-size:clamp(38px,6vw,78px)!important;
+}
+#rsvp-note p,#rsvp-note li,.rsvp-note-card p,.rsvp-note-card li{
+  color:#111!important;
+  font-family:Montserrat,Arial,sans-serif!important;
+  font-size:clamp(16px,1.45vw,20px)!important;
+  line-height:1.78!important;
+  text-align:center!important;
+}
+#rsvp-note ul,.rsvp-note-card ul{
+  list-style-position:inside!important;
+  padding-left:0!important;
+}
+.rsvp-note-signoff{
+  font-family:'Great Vibes',cursive!important;
+  color:#9ca785!important;
+  font-size:clamp(38px,5.5vw,64px)!important;
+  line-height:1.08!important;
 }
 
-/* Hide duplicated thin strip if the old overlapping layout left a cropped top band */
-#story .overlap-photos figure:nth-child(n+3),
-#story .photo-composition figure:nth-child(n+3),
-#story .photo-stack figure:nth-child(n+3),
-#story .story-photos figure:nth-child(n+3),
-#forever .overlap-photos figure:nth-child(n+3),
-#forever .photo-composition figure:nth-child(n+3),
-#forever .photo-stack figure:nth-child(n+3),
-#forever .story-photos figure:nth-child(n+3) {
-  display:none !important;
-}
-
-@media (max-width:780px) {
-  #story .overlap-photos,
-  #story .photo-composition,
-  #story .photo-stack,
-  #story .story-photos,
-  #forever .overlap-photos,
-  #forever .photo-composition,
-  #forever .photo-stack,
-  #forever .story-photos {
-    grid-template-columns:1fr !important;
+@media (max-width:980px){
+  #story .split{
+    grid-template-columns:1fr!important;
+    gap:34px!important;
   }
-  #rsvp-note.rsvp-note-section,
-  .rsvp-note-section {
-    padding:60px 14px !important;
+  #story .forever-photos-restored{
+    height:auto!important;
+    min-height:0!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:14px!important;
   }
-  #rsvp-note .rsvp-note-card,
-  .rsvp-note-card {
-    padding:42px 20px !important;
+  #story .forever-frame{
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/5!important;
+  }
+}
+@media (max-width:560px){
+  #story .forever-photos-restored{
+    grid-template-columns:1fr!important;
   }
 }
 </style>
@@ -259,10 +267,16 @@ section[id*="forever"] img {
         <p>We have found our forever in each other, and we would be honoured to share this special day with you. Please join us as we celebrate our love, our commitment, and the beginning of our next chapter together.</p>
         <p class="signature">C & C</p>
       </div>
-      <div class="photo-stack reveal">
-        <img src="assets/photos/photo-01.jpg" alt="Chavonne and Chelizia smiling together" />
-        <img src="assets/photos/photo-02.jpg" alt="Chavonne and Chelizia close up" />
-      </div>
+      
+        <div class="forever-photos-restored">
+          <figure class="forever-frame forever-frame-back">
+            <img src="assets/photos/photo-02.jpg" alt="Chavonne and Chelizia">
+          </figure>
+          <figure class="forever-frame forever-frame-front">
+            <img src="assets/photos/photo-03.jpg" alt="Chavonne and Chelizia">
+          </figure>
+        </div>
+
     </section>
 
 
@@ -437,23 +451,24 @@ section[id*="forever"] img {
 
 
     
+
 <section id="rsvp-note" class="rsvp-note-section">
   <div class="rsvp-note-card">
     <div class="eyebrow">A Small RSVP Note</div>
     <h2>A Small RSVP Note</h2>
     <p>We are so excited to celebrate our wedding with the people who have been part of our journey and are grateful that you will be sharing this special day with us.</p>
-    <p>To help us manage our venue capacity and catering arrangements, each invitation is intended for one guest only, unless alternative arrangements have been discussed with us beforehand.</p>
-    <p>Children are warmly welcomed and can be added to your RSVP at the following catering rates:</p>
+    <p>To help us manage our venue capacity and catering arrangements, each invitation is intended for one guest, unless alternative arrangements have been discussed with us beforehand.</p>
+    <p>Children are warmly welcomed and can be added to your RSVP at the following rates (as per the venue):</p>
     <ul>
       <li>Ages 0–5 years: R450 per child</li>
       <li>Ages 6–12 years: R550 per child</li>
     </ul>
-    <p>Should you wish to bring an additional adult guest or partner, please contact us before submitting your RSVP. Subject to availability, additional adult guests can be accommodated at a cost of R1,100 per person.</p>
-    <p>We truly wish we could celebrate with everyone, but due to venue and budget limitations, we have had to carefully plan our guest numbers.</p>
+    <p>Should you wish to bring a partner we have not extended an invite to, please contact us before submitting your RSVP.</p>
     <p>Thank you for your understanding and support. We cannot wait to celebrate this unforgettable day with you.</p>
     <p class="rsvp-note-signoff">With love,<br>Chavonne &amp; Chelizia</p>
   </div>
 </section>
+
 
 <section class="rsvp panel" id="rsvp">
       <video class="nature-video video-bg rsvp-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">

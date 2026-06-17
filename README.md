@@ -1,1 +1,1 @@
-Chavonne & Chelizia Wedding Website - RSVP Gift Box and Frame Fix
+Chavonne & Chelizia Wedding Website - Forever Photos Restored and RSVP Updated
