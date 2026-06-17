@@ -399,3 +399,8 @@ a{color:inherit;text-decoration:none} img{max-width:100%;display:block}.grain{po
 .palette-image-final{width:min(900px,94vw)!important;max-width:100%!important;height:auto!important;display:block!important;margin:0 auto!important}
 #story img,#forever img,.story img,.story-frame img,.photo-frame img,.overlap-photos img,.split img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important}
 .cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}.cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
+
+/* RSVP box + Our Forever frame fix backup */
+#rsvp-note.rsvp-note-section,.rsvp-note-section{background:linear-gradient(180deg,#f4f1e9 0%,#eee9df 100%)!important;color:#111!important;text-align:center!important}
+#rsvp-note .rsvp-note-card,.rsvp-note-card{max-width:1080px!important;margin:0 auto!important;background:#fff!important;color:#111!important;border:1px solid rgba(0,0,0,.12)!important;box-shadow:0 22px 65px rgba(0,0,0,.16)!important}
+#story img,#forever img,section[id*='forever'] img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:grayscale(100%) contrast(1.05)!important}

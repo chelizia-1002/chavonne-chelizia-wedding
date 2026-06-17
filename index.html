@@ -36,6 +36,169 @@
 
 
 
+
+<style id="rsvp-box-frame-fix">
+/* 1. Make A Small RSVP Note match the Gifts section box/card style */
+#rsvp-note.rsvp-note-section,
+.rsvp-note-section {
+  background:
+    radial-gradient(circle at 8% 82%, rgba(185,202,154,.16), transparent 7%),
+    radial-gradient(circle at 91% 12%, rgba(185,202,154,.13), transparent 7%),
+    linear-gradient(180deg, #f4f1e9 0%, #eee9df 100%) !important;
+  color:#111 !important;
+  padding:90px 18px !important;
+  text-align:center !important;
+}
+
+#rsvp-note .rsvp-note-card,
+.rsvp-note-card {
+  max-width:1080px !important;
+  margin:0 auto !important;
+  padding:56px clamp(24px, 6vw, 86px) !important;
+  background:#fff !important;
+  color:#111 !important;
+  border:1px solid rgba(0,0,0,.12) !important;
+  box-shadow:0 22px 65px rgba(0,0,0,.16) !important;
+}
+
+#rsvp-note .eyebrow,
+.rsvp-note-card .eyebrow {
+  color:#9ca785 !important;
+  font-family:Montserrat, Arial, sans-serif !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  letter-spacing:.33em !important;
+  text-transform:uppercase !important;
+  text-align:center !important;
+  margin-bottom:16px !important;
+}
+
+#rsvp-note h2,
+.rsvp-note-card h2 {
+  font-family:'Playfair Display', Georgia, serif !important;
+  color:#050505 !important;
+  text-transform:uppercase !important;
+  text-align:center !important;
+  font-size:clamp(38px, 6vw, 78px) !important;
+  line-height:1.02 !important;
+  margin:0 0 34px !important;
+  font-weight:900 !important;
+}
+
+#rsvp-note p,
+#rsvp-note li,
+.rsvp-note-card p,
+.rsvp-note-card li {
+  color:#111 !important;
+  font-family:Montserrat, Arial, sans-serif !important;
+  font-size:clamp(16px, 1.45vw, 20px) !important;
+  line-height:1.78 !important;
+  font-weight:500 !important;
+  text-align:center !important;
+}
+
+#rsvp-note ul,
+.rsvp-note-card ul {
+  list-style-position:inside !important;
+  padding-left:0 !important;
+  margin:10px auto 22px !important;
+}
+
+#rsvp-note .rsvp-note-signoff,
+.rsvp-note-card .rsvp-note-signoff {
+  font-family:'Great Vibes', cursive !important;
+  color:#9ca785 !important;
+  font-size:clamp(38px, 5.5vw, 64px) !important;
+  line-height:1.08 !important;
+  margin-top:30px !important;
+  text-align:center !important;
+}
+
+/* 2. Fix Our Forever Began image frames: two full frames, no face cut-offs */
+#story .overlap-photos,
+#story .photo-composition,
+#story .photo-stack,
+#story .story-photos,
+#forever .overlap-photos,
+#forever .photo-composition,
+#forever .photo-stack,
+#forever .story-photos {
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:22px !important;
+  align-items:stretch !important;
+  height:auto !important;
+  min-height:0 !important;
+}
+
+#story .overlap-photos figure,
+#story .photo-composition figure,
+#story .photo-stack figure,
+#story .story-photos figure,
+#story .photo-frame,
+#story .story-frame,
+#forever .overlap-photos figure,
+#forever .photo-composition figure,
+#forever .photo-stack figure,
+#forever .story-photos figure,
+#forever .photo-frame,
+#forever .story-frame {
+  position:relative !important;
+  inset:auto !important;
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:4/5 !important;
+  overflow:hidden !important;
+  margin:0 !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  background:#0b0b0b !important;
+}
+
+#story img,
+#forever img,
+section[id*="forever"] img {
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  display:block !important;
+  filter:grayscale(100%) contrast(1.05) !important;
+}
+
+/* Hide duplicated thin strip if the old overlapping layout left a cropped top band */
+#story .overlap-photos figure:nth-child(n+3),
+#story .photo-composition figure:nth-child(n+3),
+#story .photo-stack figure:nth-child(n+3),
+#story .story-photos figure:nth-child(n+3),
+#forever .overlap-photos figure:nth-child(n+3),
+#forever .photo-composition figure:nth-child(n+3),
+#forever .photo-stack figure:nth-child(n+3),
+#forever .story-photos figure:nth-child(n+3) {
+  display:none !important;
+}
+
+@media (max-width:780px) {
+  #story .overlap-photos,
+  #story .photo-composition,
+  #story .photo-stack,
+  #story .story-photos,
+  #forever .overlap-photos,
+  #forever .photo-composition,
+  #forever .photo-stack,
+  #forever .story-photos {
+    grid-template-columns:1fr !important;
+  }
+  #rsvp-note.rsvp-note-section,
+  .rsvp-note-section {
+    padding:60px 14px !important;
+  }
+  #rsvp-note .rsvp-note-card,
+  .rsvp-note-card {
+    padding:42px 20px !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <div class="grain"></div>

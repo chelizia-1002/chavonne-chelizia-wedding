@@ -1,1 +1,1 @@
-Chavonne & Chelizia Wedding Website - Hero Frames Palette Fix
+Chavonne & Chelizia Wedding Website - RSVP Gift Box and Frame Fix
