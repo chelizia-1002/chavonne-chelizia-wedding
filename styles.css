@@ -388,3 +388,9 @@ a{color:inherit;text-decoration:none} img{max-width:100%;display:block}.grain{po
 #gallery img,section[id*='gallery'] img,.gallery img,.this-is-us img{filter:grayscale(100%) contrast(1.05)!important}
 .cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}.cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
 .family-banner-img{width:100%!important;height:auto!important;display:block!important;filter:grayscale(100%) contrast(1.05)!important}
+
+/* RSVP note final fixes backup */
+.cc-white{color:#fff!important}.cc-green{color:#b9ca9a!important}
+#palette,#wedding-palette,.palette-section{background:#000!important;text-align:center!important}
+.palette-image-new{width:min(720px,92vw)!important;height:auto!important;display:block!important;margin:0 auto!important}
+#story img,#forever img,.story img,.story-frame img,.photo-frame img,.overlap-photos img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important}

@@ -28,33 +28,34 @@
 
 
 
-<style id="final-true-clean-changes">
+
+
+
+<style id="rsvp-note-final-fixes">
 html,body{max-width:100%!important;overflow-x:hidden!important}
-section{position:relative;overflow:hidden}
-.video-bg,.section-video-bg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;z-index:0!important;pointer-events:none!important}
-.nav{z-index:30!important}.cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}.cc-green,.nav .logo span{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
+.hero,header.hero{position:relative!important;overflow:hidden!important;background:#050505!important;background-image:none!important}
+.hero .video-bg,.hero-video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;z-index:0!important;opacity:.9!important;filter:grayscale(.1) brightness(.72) contrast(1.12)!important;transform:scale(1.02)!important;pointer-events:none!important;display:block!important}
+.hero .overlay{position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(0,0,0,.56),rgba(0,0,0,.35),rgba(0,0,0,.58))!important;pointer-events:none!important}
+.hero>*:not(.video-bg):not(.hero-video):not(.overlay),.hero-option-b{position:relative!important;z-index:3!important}
+@media (max-width:760px){.hero .video-bg,.hero-video{display:block!important;opacity:.95!important;filter:grayscale(.12) brightness(.76) contrast(1.12)!important}}
 
-/* 2. This is our Story uses same background feel as Hero */
-#love-story,#our-story{position:relative!important;background:#050505!important;color:#fff!important}
-#love-story .section-video-bg,#our-story .section-video-bg{opacity:.88!important;filter:grayscale(.12) brightness(.72) contrast(1.12) saturate(.96)!important;transform:scale(1.02)!important}
-#love-story .section-soft-overlay,#our-story .section-soft-overlay{position:absolute!important;inset:0!important;z-index:1!important;background:radial-gradient(circle at 25% 48%,rgba(0,0,0,.05) 0%,rgba(0,0,0,.25) 46%,rgba(0,0,0,.52) 100%),linear-gradient(90deg,rgba(0,0,0,.52) 0%,rgba(0,0,0,.30) 48%,rgba(0,0,0,.58) 100%)!important;pointer-events:none!important}
-#love-story>*:not(.section-video-bg):not(.section-soft-overlay),#our-story>*:not(.section-video-bg):not(.section-soft-overlay){position:relative!important;z-index:2!important}
+#palette,#wedding-palette,.palette-section{background:#000!important;text-align:center!important;padding:70px 18px!important}
+.palette-image-new{width:min(720px,92vw)!important;height:auto!important;display:block!important;margin:0 auto!important}
 
-/* 3. Before we became brides section solid black */
-#story,#family,section[id*="before"]{background:#000!important;background-image:none!important;color:#fff!important}
-#story .section-video-bg,#story .section-soft-overlay,#story .video-bg,#story .overlay,#family .section-video-bg,#family .section-soft-overlay,#family .video-bg,#family .overlay,section[id*="before"] .section-video-bg,section[id*="before"] .section-soft-overlay,section[id*="before"] .video-bg,section[id*="before"] .overlay{display:none!important}
+.cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}.cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
+#story .script,#story .story-logo,#story .lower-logo,#story .logo-large,.hero-script-logo{color:#fff!important;-webkit-text-fill-color:#fff!important}
+#story .cc-green,.hero-script-logo .cc-green,.script .cc-green,.story-logo .cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
 
-/* 4. Gallery images black and white */
-#gallery img,section[id*="gallery"] img,.gallery img,.this-is-us img{filter:grayscale(100%) contrast(1.05)!important}
+#story img,#forever img,.story img,.story-frame img,.photo-frame img,.overlap-photos img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important}
+#story .photo-frame,#story .story-frame,#story .overlap-photos figure,#forever .photo-frame{overflow:hidden!important}
 
-/* 5. C&C logo white/sage */
-#story .script,#story .story-logo,#story .lower-logo,#story .logo-large,.hero-script-logo{color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:0 8px 24px rgba(0,0,0,.75)!important}
-#story .script span,#story .story-logo span,#story .lower-logo span,#story .logo-large span,.hero-script-logo span{display:inline-block!important}
-#story .cc-green,.hero-script-logo .cc-green,.script .cc-green,.story-logo .cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important;text-shadow:0 0 22px rgba(185,202,154,.35),0 8px 24px rgba(0,0,0,.9)!important}
-
-/* 6. Groom image fit */
-.family-banner-img{width:100%!important;height:auto!important;display:block!important;filter:grayscale(100%) contrast(1.05)!important;border-radius:0!important}
-#wedding-palette,#palette{margin-top:34px!important}
+.rsvp-note-section{background:#050505!important;color:#fff!important;padding:90px 20px!important;position:relative!important}
+.rsvp-note-card{max-width:980px;margin:0 auto;padding:46px clamp(22px,5vw,70px);border:1px solid rgba(185,202,154,.38);background:rgba(255,255,255,.035);box-shadow:0 24px 70px rgba(0,0,0,.35)}
+.rsvp-note-card .eyebrow{text-transform:uppercase;letter-spacing:.32em;color:#b9ca9a;font-weight:800;text-align:center;margin-bottom:14px}
+.rsvp-note-card h2{font-family:'Playfair Display',Georgia,serif;text-align:center;text-transform:uppercase;font-size:clamp(34px,6vw,70px);line-height:1;margin:0 0 30px;color:#fff}
+.rsvp-note-card p,.rsvp-note-card li{font-family:Montserrat,Arial,sans-serif;font-size:clamp(15px,1.35vw,18px);line-height:1.75;color:#f8f8f8}
+.rsvp-note-card ul{max-width:620px;margin:8px auto 20px;padding-left:24px}
+.rsvp-note-signoff{font-family:'Great Vibes',cursive!important;font-size:clamp(34px,5vw,58px)!important;line-height:1.1!important;text-align:center;margin-top:28px!important;color:#b9ca9a!important}
 </style>
 
 </head>
@@ -287,12 +288,33 @@ section{position:relative;overflow:hidden}
         <p class="story-intro">These are the colours that inspired the look and feel of our day.</p>
       </div>
       <div class="palette-card reveal">
-        <img src="assets/photos/wedding-palette.png" alt="Wedding colour palette: black, sage green and white" loading="lazy" />
+        <img src="assets/photos/wedding-palette-new.png" alt="Wedding colour palette" class="palette-image-new">
       </div>
     </section>
 
 
-    <section class="rsvp panel" id="rsvp">
+
+
+    
+<section id="rsvp-note" class="rsvp-note-section">
+  <div class="rsvp-note-card">
+    <div class="eyebrow">A Small RSVP Note</div>
+    <h2>A Small RSVP Note</h2>
+    <p>We are so excited to celebrate our wedding with the people who have been part of our journey and are grateful that you will be sharing this special day with us.</p>
+    <p>To help us manage our venue capacity and catering arrangements, each invitation is intended for one guest only, unless alternative arrangements have been discussed with us beforehand.</p>
+    <p>Children are warmly welcomed and can be added to your RSVP at the following catering rates:</p>
+    <ul>
+      <li>Ages 0–5 years: R450 per child</li>
+      <li>Ages 6–12 years: R550 per child</li>
+    </ul>
+    <p>Should you wish to bring an additional adult guest or partner, please contact us before submitting your RSVP. Subject to availability, additional adult guests can be accommodated at a cost of R1,100 per person.</p>
+    <p>We truly wish we could celebrate with everyone, but due to venue and budget limitations, we have had to carefully plan our guest numbers.</p>
+    <p>Thank you for your understanding and support. We cannot wait to celebrate this unforgettable day with you.</p>
+    <p class="rsvp-note-signoff">With love,<br>Chavonne &amp; Chelizia</p>
+  </div>
+</section>
+
+<section class="rsvp panel" id="rsvp">
       <video class="nature-video video-bg rsvp-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
         <source src="assets/videos/nature-1.mp4" type="video/mp4">
       </video>

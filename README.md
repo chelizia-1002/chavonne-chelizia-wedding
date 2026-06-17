@@ -1,1 +1,1 @@
-Chavonne & Chelizia Wedding Website - Final true clean build with all requested changes.
+Chavonne & Chelizia Wedding Website - RSVP Note Final Fixes
