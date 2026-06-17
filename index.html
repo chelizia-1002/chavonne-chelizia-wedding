@@ -31,31 +31,237 @@
 
 
 
-<style id="rsvp-note-final-fixes">
+
+
+
+<style id="hero-frames-palette-fix">
 html,body{max-width:100%!important;overflow-x:hidden!important}
-.hero,header.hero{position:relative!important;overflow:hidden!important;background:#050505!important;background-image:none!important}
-.hero .video-bg,.hero-video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;z-index:0!important;opacity:.9!important;filter:grayscale(.1) brightness(.72) contrast(1.12)!important;transform:scale(1.02)!important;pointer-events:none!important;display:block!important}
-.hero .overlay{position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(0,0,0,.56),rgba(0,0,0,.35),rgba(0,0,0,.58))!important;pointer-events:none!important}
-.hero>*:not(.video-bg):not(.hero-video):not(.overlay),.hero-option-b{position:relative!important;z-index:3!important}
-@media (max-width:760px){.hero .video-bg,.hero-video{display:block!important;opacity:.95!important;filter:grayscale(.12) brightness(.76) contrast(1.12)!important}}
+.cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}
+.cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
 
-#palette,#wedding-palette,.palette-section{background:#000!important;text-align:center!important;padding:70px 18px!important}
-.palette-image-new{width:min(720px,92vw)!important;height:auto!important;display:block!important;margin:0 auto!important}
+/* 1. Wedding palette image replacement */
+#palette,#wedding-palette,.palette-section{
+  background:#000!important;
+  text-align:center!important;
+  padding:70px 18px!important;
+}
+.palette-image-final{
+  width:min(900px,94vw)!important;
+  max-width:100%!important;
+  height:auto!important;
+  display:block!important;
+  margin:0 auto!important;
+}
 
-.cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}.cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
-#story .script,#story .story-logo,#story .lower-logo,#story .logo-large,.hero-script-logo{color:#fff!important;-webkit-text-fill-color:#fff!important}
-#story .cc-green,.hero-script-logo .cc-green,.script .cc-green,.story-logo .cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
+/* 3. Hero returned to previous look with black textured background and two photo frames */
+header.hero,.hero{
+  position:relative!important;
+  min-height:100vh!important;
+  min-height:100svh!important;
+  width:100%!important;
+  overflow:hidden!important;
+  background:#050505!important;
+  background-image:none!important;
+  display:flex!important;
+  align-items:center!important;
+  padding:110px 5vw 70px!important;
+  box-sizing:border-box!important;
+  text-align:left!important;
+}
+.hero video,.hero .video-bg,.hero-video{
+  display:none!important;
+}
+.hero-bg-static{
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  background:
+    radial-gradient(circle at 8% 55%, rgba(185,202,154,.14), transparent 10%),
+    radial-gradient(circle at 94% 70%, rgba(185,202,154,.13), transparent 10%),
+    linear-gradient(90deg,#050505 0%,#070707 50%,#050505 100%)!important;
+}
+.hero-bg-static::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.22;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,.08) 1px, transparent 0);
+  background-size:8px 8px;
+}
+.hero-soft-overlay,.hero .overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:1!important;
+  background:linear-gradient(90deg,rgba(0,0,0,.14),rgba(0,0,0,.05),rgba(0,0,0,.18))!important;
+  pointer-events:none!important;
+}
+.hero-reference-layout{
+  position:relative!important;
+  z-index:3!important;
+  width:100%!important;
+  max-width:1440px!important;
+  margin:0 auto!important;
+  display:grid!important;
+  grid-template-columns:minmax(420px, 1.05fr) minmax(420px, .95fr)!important;
+  gap:52px!important;
+  align-items:center!important;
+}
+.hero-copy{
+  position:relative!important;
+  z-index:4!important;
+  max-width:760px!important;
+}
+.hero-kicker{
+  color:#fff!important;
+  font-family:Montserrat,Arial,sans-serif!important;
+  font-weight:900!important;
+  text-transform:uppercase!important;
+  letter-spacing:.42em!important;
+  font-size:clamp(13px,1.1vw,18px)!important;
+  margin-bottom:26px!important;
+}
+.hero-copy h1{
+  font-family:'Playfair Display',Georgia,serif!important;
+  color:#fff!important;
+  font-size:clamp(52px,6.4vw,100px)!important;
+  line-height:.98!important;
+  letter-spacing:.01em!important;
+  text-transform:uppercase!important;
+  margin:0 0 34px!important;
+  font-weight:900!important;
+  text-shadow:0 12px 34px rgba(0,0,0,.65)!important;
+}
+.hero-copy p{
+  color:#fff!important;
+  font-family:Montserrat,Arial,sans-serif!important;
+  font-size:clamp(16px,1.28vw,21px)!important;
+  line-height:1.75!important;
+  font-weight:650!important;
+  max-width:720px!important;
+  margin:0 0 52px!important;
+}
+.hero-script-logo{
+  font-family:'Great Vibes',cursive!important;
+  font-size:clamp(64px,7vw,112px)!important;
+  line-height:1!important;
+  margin:0 0 22px!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+.hero-script-logo .cc-green{
+  color:#b9ca9a!important;
+  -webkit-text-fill-color:#b9ca9a!important;
+}
+.hero-actions{
+  display:flex!important;
+  align-items:center!important;
+  gap:18px!important;
+  flex-wrap:wrap!important;
+  margin-top:10px!important;
+}
+.hero-actions .btn{
+  position:relative!important;
+  z-index:5!important;
+  margin:0!important;
+}
+.hero .scroll,.hero .scroll-down,.hero [class*="scroll"]{
+  display:none!important;
+}
+.hero-photo-composition{
+  position:relative!important;
+  height:min(72vh,680px)!important;
+  min-height:440px!important;
+}
+.hero-frame{
+  position:absolute!important;
+  margin:0!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  background:rgba(0,0,0,.34)!important;
+  box-shadow:0 22px 70px rgba(0,0,0,.45)!important;
+  overflow:hidden!important;
+}
+.hero-frame img{
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  filter:grayscale(100%) contrast(1.05)!important;
+}
+.hero-frame-back{
+  width:48%!important;
+  height:72%!important;
+  right:2%!important;
+  top:0!important;
+}
+.hero-frame-front{
+  width:68%!important;
+  height:66%!important;
+  left:0!important;
+  bottom:0!important;
+  z-index:2!important;
+}
 
-#story img,#forever img,.story img,.story-frame img,.photo-frame img,.overlap-photos img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important}
-#story .photo-frame,#story .story-frame,#story .overlap-photos figure,#forever .photo-frame{overflow:hidden!important}
+/* 2. Our Forever Began section frames: fit images properly and avoid cutting faces */
+#story img,#forever img,.story img,.story-frame img,.photo-frame img,.overlap-photos img,.split img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  display:block!important;
+}
+#story .photo-frame,#story .story-frame,#story figure,#forever .photo-frame,.overlap-photos figure,.split figure{
+  overflow:hidden!important;
+}
+#story .script,#story .story-logo,#story .lower-logo,#story .logo-large{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+#story .cc-green,#forever .cc-green,.story-logo .cc-green,.script .cc-green{
+  color:#b9ca9a!important;
+  -webkit-text-fill-color:#b9ca9a!important;
+}
 
-.rsvp-note-section{background:#050505!important;color:#fff!important;padding:90px 20px!important;position:relative!important}
-.rsvp-note-card{max-width:980px;margin:0 auto;padding:46px clamp(22px,5vw,70px);border:1px solid rgba(185,202,154,.38);background:rgba(255,255,255,.035);box-shadow:0 24px 70px rgba(0,0,0,.35)}
-.rsvp-note-card .eyebrow{text-transform:uppercase;letter-spacing:.32em;color:#b9ca9a;font-weight:800;text-align:center;margin-bottom:14px}
-.rsvp-note-card h2{font-family:'Playfair Display',Georgia,serif;text-align:center;text-transform:uppercase;font-size:clamp(34px,6vw,70px);line-height:1;margin:0 0 30px;color:#fff}
-.rsvp-note-card p,.rsvp-note-card li{font-family:Montserrat,Arial,sans-serif;font-size:clamp(15px,1.35vw,18px);line-height:1.75;color:#f8f8f8}
-.rsvp-note-card ul{max-width:620px;margin:8px auto 20px;padding-left:24px}
-.rsvp-note-signoff{font-family:'Great Vibes',cursive!important;font-size:clamp(34px,5vw,58px)!important;line-height:1.1!important;text-align:center;margin-top:28px!important;color:#b9ca9a!important}
+@media (max-width:980px){
+  header.hero,.hero{
+    padding:96px 20px 54px!important;
+    min-height:auto!important;
+  }
+  .hero-reference-layout{
+    grid-template-columns:1fr!important;
+    gap:36px!important;
+    text-align:center!important;
+  }
+  .hero-copy{
+    margin:0 auto!important;
+  }
+  .hero-actions{
+    justify-content:center!important;
+  }
+  .hero-photo-composition{
+    height:auto!important;
+    min-height:0!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:14px!important;
+  }
+  .hero-frame{
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/5!important;
+  }
+}
+@media (max-width:560px){
+  .hero-kicker{letter-spacing:.25em!important;font-size:12px!important}
+  .hero-copy h1{font-size:clamp(42px,13vw,62px)!important}
+  .hero-copy p{font-size:15.5px!important;line-height:1.65!important}
+  .hero-photo-composition{grid-template-columns:1fr!important}
+  .hero-actions{gap:12px!important}
+  .hero-actions .btn{min-width:190px!important;text-align:center!important}
+}
 </style>
 
 </head>
@@ -288,7 +494,7 @@ html,body{max-width:100%!important;overflow-x:hidden!important}
         <p class="story-intro">These are the colours that inspired the look and feel of our day.</p>
       </div>
       <div class="palette-card reveal">
-        <img src="assets/photos/wedding-palette-new.png" alt="Wedding colour palette" class="palette-image-new">
+        <img src="assets/photos/wedding-palette-final.png" alt="Wedding color palette" class="palette-image-final">
       </div>
     </section>
 

@@ -1,1 +1,1 @@
-Chavonne & Chelizia Wedding Website - RSVP Note Final Fixes
+Chavonne & Chelizia Wedding Website - Hero Frames Palette Fix
