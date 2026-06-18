@@ -624,3 +624,25 @@ html body .hero .tagline{
   border:0 !important;
   box-shadow:none !important;
 }
+
+
+/* Mobile Wedding Palette Portrait Fix */
+@media (max-width: 768px){
+  .palette-designed-image,
+  #wedding-palette .palette-designed-image,
+  .wedding-palette img{
+      width:100% !important;
+      max-width:100% !important;
+      height:auto !important;
+      object-fit:contain !important;
+      transform:scale(1.35) !important;
+      transform-origin:center top !important;
+      margin:40px auto 140px auto !important;
+      display:block !important;
+  }
+  #wedding-palette,
+  .palette-section{
+      overflow:hidden !important;
+      padding-bottom:120px !important;
+  }
+}
