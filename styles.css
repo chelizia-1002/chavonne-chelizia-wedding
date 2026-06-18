@@ -646,3 +646,121 @@ html body .hero .tagline{
       padding-bottom:120px !important;
   }
 }
+
+
+/* COLOR PALETTE SECTION ONLY FIX */
+#wedding-palette.palette-mobile-fixed,
+#palette.palette-mobile-fixed,
+.palette-mobile-fixed {
+  text-align:center !important;
+}
+
+/* Desktop: keep the section broadly as-is, only ensure centering */
+#wedding-palette.palette-mobile-fixed .palette-content,
+#wedding-palette.palette-mobile-fixed .palette-designed-inner,
+#wedding-palette.palette-mobile-fixed .section-inner,
+#wedding-palette.palette-mobile-fixed > div,
+#palette.palette-mobile-fixed .palette-content,
+#palette.palette-mobile-fixed .palette-designed-inner,
+#palette.palette-mobile-fixed .section-inner,
+#palette.palette-mobile-fixed > div,
+.palette-mobile-fixed .palette-content,
+.palette-mobile-fixed .palette-designed-inner,
+.palette-mobile-fixed .section-inner {
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+
+/* Mobile: make the palette section portrait-like and stop headings cutting off */
+@media (max-width: 768px) {
+  #wedding-palette.palette-mobile-fixed,
+  #palette.palette-mobile-fixed,
+  .palette-mobile-fixed {
+    text-align:center !important;
+    overflow:hidden !important;
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+
+  #wedding-palette.palette-mobile-fixed .eyebrow,
+  #palette.palette-mobile-fixed .eyebrow,
+  .palette-mobile-fixed .eyebrow {
+    text-align:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    letter-spacing:.22em !important;
+    font-size:11px !important;
+    max-width:100% !important;
+    white-space:normal !important;
+  }
+
+  #wedding-palette.palette-mobile-fixed h1,
+  #wedding-palette.palette-mobile-fixed h2,
+  #wedding-palette.palette-mobile-fixed h3,
+  #palette.palette-mobile-fixed h1,
+  #palette.palette-mobile-fixed h2,
+  #palette.palette-mobile-fixed h3,
+  .palette-mobile-fixed h1,
+  .palette-mobile-fixed h2,
+  .palette-mobile-fixed h3 {
+    text-align:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    max-width:94vw !important;
+    width:100% !important;
+    font-size:clamp(34px, 11vw, 52px) !important;
+    line-height:1.05 !important;
+    letter-spacing:.01em !important;
+    white-space:normal !important;
+    overflow:visible !important;
+    word-break:normal !important;
+    overflow-wrap:normal !important;
+  }
+
+  #wedding-palette.palette-mobile-fixed p,
+  #palette.palette-mobile-fixed p,
+  .palette-mobile-fixed p {
+    text-align:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    max-width:88vw !important;
+    font-size:15px !important;
+    line-height:1.55 !important;
+  }
+
+  #wedding-palette.palette-mobile-fixed img,
+  #palette.palette-mobile-fixed img,
+  .palette-mobile-fixed img {
+    display:block !important;
+    width:135% !important;
+    max-width:none !important;
+    height:auto !important;
+    margin:26px 0 110px 50% !important;
+    transform:translateX(-50%) !important;
+    object-fit:contain !important;
+    object-position:center top !important;
+  }
+}
+
+@media (max-width: 430px) {
+  #wedding-palette.palette-mobile-fixed h1,
+  #wedding-palette.palette-mobile-fixed h2,
+  #wedding-palette.palette-mobile-fixed h3,
+  #palette.palette-mobile-fixed h1,
+  #palette.palette-mobile-fixed h2,
+  #palette.palette-mobile-fixed h3,
+  .palette-mobile-fixed h1,
+  .palette-mobile-fixed h2,
+  .palette-mobile-fixed h3 {
+    font-size:clamp(31px, 10.5vw, 45px) !important;
+    line-height:1.08 !important;
+  }
+
+  #wedding-palette.palette-mobile-fixed img,
+  #palette.palette-mobile-fixed img,
+  .palette-mobile-fixed img {
+    width:150% !important;
+    margin-bottom:130px !important;
+  }
+}
