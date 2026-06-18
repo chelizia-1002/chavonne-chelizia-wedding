@@ -600,3 +600,27 @@ html body .hero .tagline{
     padding:42px 20px !important;
   }
 }
+
+
+/* Wedding Palette section only: restore full designed look */
+#wedding-palette.palette-designed-image-section {
+  padding:0 !important;
+  margin:0 !important;
+  background:#9b7d82 !important;
+  text-align:center !important;
+  overflow:hidden !important;
+}
+#wedding-palette .palette-designed-image-wrap {
+  width:100% !important;
+  margin:0 auto !important;
+  padding:0 !important;
+}
+#wedding-palette .palette-designed-image {
+  width:100% !important;
+  max-width:100% !important;
+  height:auto !important;
+  display:block !important;
+  margin:0 auto !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
