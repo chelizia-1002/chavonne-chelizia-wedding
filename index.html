@@ -172,166 +172,198 @@ html body .hero a.btn {
 </style>
 
 
-<style id="direct-rsvp-palette-fix">
-/* ONLY changed sections: RSVP note and Wedding Palette */
 
-/* RSVP note design */
-#rsvp-note.rsvp-note-designed{
-  position:relative!important;
-  overflow:hidden!important;
-  background:
-    radial-gradient(circle at 8% 28%, rgba(156,167,133,.18), transparent 7%),
-    radial-gradient(circle at 92% 72%, rgba(156,167,133,.16), transparent 7%),
-    linear-gradient(180deg,#f7f4ed 0%,#eee8dc 100%)!important;
-  color:#111!important;
-  text-align:center!important;
-  padding:110px 18px 120px!important;
-}
-#rsvp-note.rsvp-note-designed::before,
-#rsvp-note.rsvp-note-designed::after{
-  content:""!important;
-  position:absolute!important;
-  bottom:-28px!important;
-  width:480px!important;
-  height:210px!important;
-  pointer-events:none!important;
-  opacity:.72!important;
-  background:
-    radial-gradient(ellipse at 18% 78%, rgba(156,167,133,.32) 0 12%, transparent 13%),
-    radial-gradient(ellipse at 42% 82%, rgba(255,255,255,.82) 0 15%, transparent 16%),
-    radial-gradient(ellipse at 66% 76%, rgba(156,167,133,.28) 0 11%, transparent 12%),
-    linear-gradient(18deg, transparent 0 48%, rgba(156,167,133,.22) 49% 51%, transparent 52%);
-}
-#rsvp-note.rsvp-note-designed::before{left:-100px!important}
-#rsvp-note.rsvp-note-designed::after{right:-100px!important;transform:scaleX(-1)!important}
-#rsvp-note.rsvp-note-designed .rsvp-note-card{
-  position:relative!important;
-  z-index:2!important;
-  max-width:1060px!important;
-  margin:0 auto!important;
-  padding:64px clamp(26px,6vw,88px)!important;
-  background:rgba(255,255,255,.96)!important;
-  color:#111!important;
-  border:1px solid rgba(0,0,0,.12)!important;
-  box-shadow:0 28px 85px rgba(0,0,0,.18)!important;
-}
-#rsvp-note.rsvp-note-designed .eyebrow{
-  color:#9ca785!important;
-  font-family:Montserrat,Arial,sans-serif!important;
-  font-weight:800!important;
-  text-transform:uppercase!important;
-  letter-spacing:.34em!important;
-  font-size:13px!important;
-  margin-bottom:18px!important;
-}
-#rsvp-note.rsvp-note-designed h2{
-  font-family:'Playfair Display',Georgia,serif!important;
-  color:#050505!important;
-  text-transform:uppercase!important;
-  font-size:clamp(42px,6.4vw,82px)!important;
-  line-height:1!important;
-  margin:0 0 34px!important;
-  font-weight:900!important;
-}
-#rsvp-note.rsvp-note-designed p,
-#rsvp-note.rsvp-note-designed li{
-  font-family:Montserrat,Arial,sans-serif!important;
-  color:#111!important;
-  font-size:clamp(15px,1.35vw,19px)!important;
-  line-height:1.78!important;
-  font-weight:500!important;
-  text-align:center!important;
-}
-#rsvp-note.rsvp-note-designed ul{
-  list-style-position:inside!important;
-  padding-left:0!important;
-  margin:12px auto 24px!important;
-}
-#rsvp-note.rsvp-note-designed .rsvp-note-signoff{
-  font-family:'Great Vibes',cursive!important;
-  color:#9ca785!important;
-  font-size:clamp(38px,5.6vw,66px)!important;
-  line-height:1.08!important;
-  margin-top:32px!important;
-}
 
-/* Wedding Palette design */
-#wedding-palette.palette-designed{
+
+<style id="palette-integrated-design">
+/* Integrated Wedding Palette design — real HTML/CSS, not a screenshot */
+#wedding-palette.palette-integrated {
   position:relative!important;
   overflow:hidden!important;
   min-height:100vh!important;
-  padding:92px 18px 110px!important;
+  padding:96px 18px 140px!important;
   text-align:center!important;
-  background:
-    radial-gradient(circle at 4% 34%, rgba(255,255,255,.16), transparent 4%),
-    radial-gradient(circle at 91% 72%, rgba(255,255,255,.15), transparent 4%),
-    linear-gradient(180deg,#9b7d82 0%, #9a7b81 100%)!important;
   color:#eef3d4!important;
+  background:
+    radial-gradient(circle at 4% 31%, rgba(255,255,255,.16) 0 2.5%, transparent 2.7%),
+    radial-gradient(circle at 9% 39%, rgba(255,255,255,.10) 0 3.2%, transparent 3.4%),
+    radial-gradient(circle at 92% 66%, rgba(255,255,255,.13) 0 3.6%, transparent 3.8%),
+    radial-gradient(circle at 98% 75%, rgba(255,255,255,.12) 0 2.5%, transparent 2.7%),
+    linear-gradient(180deg,#9b7d82 0%,#9a7b81 100%)!important;
 }
-#wedding-palette.palette-designed::after{
+
+#wedding-palette.palette-integrated::before {
   content:""!important;
   position:absolute!important;
-  left:0!important;
-  right:0!important;
-  bottom:0!important;
-  height:260px!important;
+  inset:0!important;
   pointer-events:none!important;
-  background:
-    radial-gradient(ellipse at 8% 90%, rgba(255,255,255,.72) 0 7%, transparent 8%),
-    radial-gradient(ellipse at 20% 92%, rgba(156,167,133,.45) 0 7%, transparent 8%),
-    radial-gradient(ellipse at 80% 92%, rgba(156,167,133,.45) 0 7%, transparent 8%),
-    linear-gradient(0deg, rgba(218,226,210,.58), transparent 72%)!important;
-  opacity:.9!important;
+  opacity:.22!important;
+  background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.28) 1px, transparent 0)!important;
+  background-size:7px 7px!important;
 }
-#wedding-palette .palette-designed-inner{
+
+#wedding-palette .palette-content {
   position:relative!important;
   z-index:2!important;
   max-width:1180px!important;
   margin:0 auto!important;
 }
-#wedding-palette .eyebrow{
+
+#wedding-palette .eyebrow {
   color:#e5edc7!important;
   font-family:Montserrat,Arial,sans-serif!important;
   font-weight:800!important;
   text-transform:uppercase!important;
-  letter-spacing:.34em!important;
-  font-size:13px!important;
-  margin-bottom:18px!important;
+  letter-spacing:.36em!important;
+  font-size:14px!important;
+  margin-bottom:22px!important;
 }
-#wedding-palette h2{
+
+#wedding-palette h2 {
   font-family:'Playfair Display',Georgia,serif!important;
   color:#eef3d4!important;
   text-transform:uppercase!important;
-  font-size:clamp(46px,7vw,92px)!important;
-  line-height:1.05!important;
+  font-size:clamp(48px,7vw,96px)!important;
+  line-height:1.04!important;
+  letter-spacing:.02em!important;
   margin:0!important;
   font-weight:900!important;
-  text-shadow:0 7px 28px rgba(0,0,0,.14)!important;
+  text-shadow:0 9px 28px rgba(0,0,0,.15)!important;
 }
-#wedding-palette p{
+
+#wedding-palette p {
   color:#eef3d4!important;
   font-family:Montserrat,Arial,sans-serif!important;
-  font-size:clamp(16px,1.5vw,22px)!important;
-  font-weight:650!important;
-  margin:30px auto 48px!important;
+  font-size:clamp(16px,1.45vw,22px)!important;
+  font-weight:700!important;
+  margin:32px auto 58px!important;
 }
-#wedding-palette .palette-full-design{
-  display:block!important;
-  width:min(980px,92vw)!important;
-  max-width:100%!important;
-  height:auto!important;
+
+#wedding-palette .palette-swatches {
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(220px,1fr))!important;
+  gap:10px!important;
+  max-width:900px!important;
   margin:0 auto!important;
-  border:0!important;
-  box-shadow:none!important;
-  background:transparent!important;
+  align-items:start!important;
+  justify-items:center!important;
 }
-@media(max-width:760px){
-  #rsvp-note.rsvp-note-designed{padding:74px 14px 90px!important}
-  #rsvp-note.rsvp-note-designed .rsvp-note-card{padding:42px 20px!important}
-  #rsvp-note.rsvp-note-designed::before,
-  #rsvp-note.rsvp-note-designed::after{width:280px!important;height:150px!important;opacity:.48!important}
-  #wedding-palette.palette-designed{min-height:auto!important;padding:70px 14px 86px!important}
-  #wedding-palette p{margin-bottom:28px!important}
+
+#wedding-palette .palette-swatch {
+  position:relative!important;
+  width:100%!important;
+  aspect-ratio:1.08/1!important;
+  border:4px solid rgba(255,255,255,.92)!important;
+  border-radius:18px!important;
+  box-shadow:0 18px 50px rgba(0,0,0,.18)!important;
+  display:grid!important;
+  place-items:center!important;
+  overflow:visible!important;
+}
+
+#wedding-palette .palette-black { background:#000!important; }
+#wedding-palette .palette-white { background:#fff!important; border-color:#111!important; }
+#wedding-palette .palette-sage { background:#9ca785!important; }
+
+#wedding-palette .mini-logo {
+  font-family:'Great Vibes',cursive!important;
+  font-size:clamp(38px,5vw,66px)!important;
+  line-height:1!important;
+  letter-spacing:-.05em!important;
+  color:#fff!important;
+  text-shadow:0 7px 24px rgba(0,0,0,.22)!important;
+}
+#wedding-palette .palette-white .mini-logo,
+#wedding-palette .palette-white .mini-logo span {
+  color:#9ca785!important;
+  -webkit-text-fill-color:#9ca785!important;
+}
+#wedding-palette .mini-logo em {
+  font-style:normal!important;
+  color:#9ca785!important;
+  -webkit-text-fill-color:#9ca785!important;
+}
+#wedding-palette .palette-sage .mini-logo em {
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+
+#wedding-palette .drips {
+  position:absolute!important;
+  left:-4px!important;
+  right:-4px!important;
+  top:72%!important;
+  height:190px!important;
+  pointer-events:none!important;
+  z-index:3!important;
+}
+
+#wedding-palette .palette-black .drips {
+  background:
+    radial-gradient(ellipse at 10% 0%, #000 0 28px, transparent 30px),
+    radial-gradient(ellipse at 22% 2%, #000 0 17px, transparent 19px),
+    radial-gradient(ellipse at 39% 0%, #000 0 38px, transparent 40px),
+    radial-gradient(ellipse at 58% 0%, #000 0 23px, transparent 25px),
+    radial-gradient(ellipse at 78% 0%, #000 0 34px, transparent 36px),
+    linear-gradient(90deg, transparent 5%, #000 5% 7%, transparent 7% 14%, #000 14% 17%, transparent 17% 27%, #000 27% 30%, transparent 30% 38%, #000 38% 40%, transparent 40% 51%, #000 51% 54%, transparent 54% 70%, #000 70% 72%, transparent 72% 82%, #000 82% 85%, transparent 85%)!important;
+  background-size:100% 100%!important;
+}
+
+#wedding-palette .palette-white .drips {
+  background:
+    radial-gradient(ellipse at 12% 0%, #fff 0 28px, transparent 30px),
+    radial-gradient(ellipse at 31% 0%, #fff 0 21px, transparent 23px),
+    radial-gradient(ellipse at 48% 0%, #fff 0 36px, transparent 38px),
+    radial-gradient(ellipse at 68% 0%, #fff 0 25px, transparent 27px),
+    radial-gradient(ellipse at 86% 0%, #fff 0 34px, transparent 36px),
+    linear-gradient(90deg, transparent 4%, #fff 4% 7%, transparent 7% 18%, #fff 18% 20%, transparent 20% 35%, #fff 35% 38%, transparent 38% 56%, #fff 56% 60%, transparent 60% 74%, #fff 74% 77%, transparent 77% 88%, #fff 88% 91%, transparent 91%)!important;
+}
+
+#wedding-palette .palette-sage .drips {
+  background:
+    radial-gradient(ellipse at 10% 0%, #9ca785 0 28px, transparent 30px),
+    radial-gradient(ellipse at 25% 1%, #9ca785 0 20px, transparent 22px),
+    radial-gradient(ellipse at 42% 0%, #9ca785 0 39px, transparent 41px),
+    radial-gradient(ellipse at 65% 0%, #9ca785 0 24px, transparent 26px),
+    radial-gradient(ellipse at 83% 0%, #9ca785 0 34px, transparent 36px),
+    linear-gradient(90deg, transparent 5%, #9ca785 5% 8%, transparent 8% 17%, #9ca785 17% 19%, transparent 19% 29%, #9ca785 29% 33%, transparent 33% 48%, #9ca785 48% 51%, transparent 51% 66%, #9ca785 66% 69%, transparent 69% 80%, #9ca785 80% 83%, transparent 83%)!important;
+}
+
+#wedding-palette .palette-floral-edge {
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:260px!important;
+  z-index:1!important;
+  pointer-events:none!important;
+  opacity:.78!important;
+  background:
+    radial-gradient(ellipse at 7% 88%, rgba(255,255,255,.85) 0 7%, transparent 8%),
+    radial-gradient(ellipse at 18% 93%, rgba(156,167,133,.52) 0 6%, transparent 7%),
+    radial-gradient(ellipse at 28% 97%, rgba(222,232,220,.72) 0 5%, transparent 6%),
+    radial-gradient(ellipse at 74% 97%, rgba(222,232,220,.72) 0 5%, transparent 6%),
+    radial-gradient(ellipse at 83% 93%, rgba(156,167,133,.52) 0 6%, transparent 7%),
+    radial-gradient(ellipse at 94% 88%, rgba(255,255,255,.85) 0 7%, transparent 8%),
+    linear-gradient(0deg, rgba(221,230,213,.62), transparent 72%)!important;
+}
+
+@media(max-width:860px){
+  #wedding-palette.palette-integrated {
+    min-height:auto!important;
+    padding:74px 14px 96px!important;
+  }
+  #wedding-palette .palette-swatches {
+    grid-template-columns:1fr!important;
+    max-width:330px!important;
+    gap:26px!important;
+  }
+  #wedding-palette .palette-swatch {
+    aspect-ratio:1.2/1!important;
+  }
+  #wedding-palette .drips {
+    height:120px!important;
+  }
 }
 </style>
 
@@ -564,14 +596,31 @@ html body .hero a.btn {
       </div>
     </section>
 
-<section id="wedding-palette" class="palette-section palette-designed">
-  <div class="palette-designed-inner">
+
+<section id="wedding-palette" class="palette-section palette-integrated">
+  <div class="palette-floral-edge" aria-hidden="true"></div>
+  <div class="palette-content">
     <div class="eyebrow">Wedding Palette</div>
     <h2>Black, Sage Green<br>and White.</h2>
     <p>These are the colours that inspired the look and feel of our day.</p>
-    <img src="assets/photos/colour-pal-design.jpg" alt="Wedding Palette - black, sage green and white" class="palette-full-design">
+
+    <div class="palette-swatches" aria-label="Wedding palette colours">
+      <div class="palette-swatch palette-black">
+        <div class="mini-logo"><span>C</span><em>&amp;</em><span>C</span></div>
+        <div class="drips" aria-hidden="true"></div>
+      </div>
+      <div class="palette-swatch palette-white">
+        <div class="mini-logo"><span>C</span><em>&amp;</em><span>C</span></div>
+        <div class="drips" aria-hidden="true"></div>
+      </div>
+      <div class="palette-swatch palette-sage">
+        <div class="mini-logo"><span>C</span><em>&amp;</em><span>C</span></div>
+        <div class="drips" aria-hidden="true"></div>
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 

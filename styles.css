@@ -506,3 +506,12 @@ html body .hero .tagline{
 #rsvp-note.rsvp-note-designed .rsvp-note-card{max-width:1060px!important;margin:0 auto!important;background:rgba(255,255,255,.96)!important;color:#111!important;border:1px solid rgba(0,0,0,.12)!important;box-shadow:0 28px 85px rgba(0,0,0,.18)!important}
 #wedding-palette.palette-designed{background:linear-gradient(180deg,#9b7d82 0%,#9a7b81 100%)!important;color:#eef3d4!important;text-align:center!important}
 #wedding-palette .palette-full-design{display:block!important;width:min(980px,92vw)!important;max-width:100%!important;height:auto!important;margin:0 auto!important;border:0!important;box-shadow:none!important}
+
+
+/* Integrated Wedding Palette design backup */
+#wedding-palette.palette-integrated{background:linear-gradient(180deg,#9b7d82 0%,#9a7b81 100%)!important;color:#eef3d4!important;text-align:center!important}
+#wedding-palette .palette-swatches{display:grid!important;grid-template-columns:repeat(3,minmax(220px,1fr))!important;gap:10px!important;max-width:900px!important;margin:0 auto!important}
+#wedding-palette .palette-swatch{position:relative!important;width:100%!important;aspect-ratio:1.08/1!important;border:4px solid rgba(255,255,255,.92)!important;border-radius:18px!important;display:grid!important;place-items:center!important;overflow:visible!important}
+#wedding-palette .palette-black{background:#000!important}
+#wedding-palette .palette-white{background:#fff!important;border-color:#111!important}
+#wedding-palette .palette-sage{background:#9ca785!important}
