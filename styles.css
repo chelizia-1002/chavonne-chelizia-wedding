@@ -501,17 +501,102 @@ html body .hero .tagline{
   text-shadow:0 10px 34px rgba(0,0,0,.95),0 2px 8px rgba(0,0,0,.9)!important;
 }
 
-/* Direct RSVP + palette fix backup */
-#rsvp-note.rsvp-note-designed{background:linear-gradient(180deg,#f7f4ed 0%,#eee8dc 100%)!important;color:#111!important;text-align:center!important}
-#rsvp-note.rsvp-note-designed .rsvp-note-card{max-width:1060px!important;margin:0 auto!important;background:rgba(255,255,255,.96)!important;color:#111!important;border:1px solid rgba(0,0,0,.12)!important;box-shadow:0 28px 85px rgba(0,0,0,.18)!important}
-#wedding-palette.palette-designed{background:linear-gradient(180deg,#9b7d82 0%,#9a7b81 100%)!important;color:#eef3d4!important;text-align:center!important}
-#wedding-palette .palette-full-design{display:block!important;width:min(980px,92vw)!important;max-width:100%!important;height:auto!important;margin:0 auto!important;border:0!important;box-shadow:none!important}
 
+/* RESTORED FULL SITE - ONLY TWO REQUESTED CHANGES */
 
-/* Integrated Wedding Palette design backup */
-#wedding-palette.palette-integrated{background:linear-gradient(180deg,#9b7d82 0%,#9a7b81 100%)!important;color:#eef3d4!important;text-align:center!important}
-#wedding-palette .palette-swatches{display:grid!important;grid-template-columns:repeat(3,minmax(220px,1fr))!important;gap:10px!important;max-width:900px!important;margin:0 auto!important}
-#wedding-palette .palette-swatch{position:relative!important;width:100%!important;aspect-ratio:1.08/1!important;border:4px solid rgba(255,255,255,.92)!important;border-radius:18px!important;display:grid!important;place-items:center!important;overflow:visible!important}
-#wedding-palette .palette-black{background:#000!important}
-#wedding-palette .palette-white{background:#fff!important;border-color:#111!important}
-#wedding-palette .palette-sage{background:#9ca785!important}
+/* 1. Wedding Palette: replace with Image 1 artwork */
+#wedding-palette.palette-image-final-section {
+  padding:0 !important;
+  margin:0 !important;
+  background:#f1f1ec !important;
+  text-align:center !important;
+  overflow:hidden !important;
+}
+#wedding-palette .palette-image-final-wrap {
+  width:100% !important;
+  margin:0 auto !important;
+  padding:0 !important;
+}
+#wedding-palette .palette-image1-final {
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  height:auto !important;
+  margin:0 auto !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+/* 2. Before You RSVP: gift card style */
+#rsvp-note.rsvp-gift-style-section {
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 3% 25%, rgba(156,167,133,.18) 0 2.9%, transparent 3.1%),
+    radial-gradient(circle at 12% 83%, rgba(156,167,133,.16) 0 2.6%, transparent 2.8%),
+    radial-gradient(circle at 91% 25%, rgba(156,167,133,.14) 0 2.7%, transparent 2.9%),
+    radial-gradient(circle at 94% 72%, rgba(156,167,133,.18) 0 3.5%, transparent 3.7%),
+    linear-gradient(180deg,#f7f4ed 0%,#eee8dc 100%) !important;
+  padding:92px 18px !important;
+  color:#111 !important;
+  text-align:center !important;
+}
+#rsvp-note.rsvp-gift-style-section .rsvp-note-card {
+  max-width:1080px !important;
+  margin:0 auto !important;
+  padding:58px clamp(24px,6vw,88px) !important;
+  background:rgba(255,255,255,.98) !important;
+  color:#111 !important;
+  border:1px solid rgba(0,0,0,.12) !important;
+  box-shadow:0 22px 65px rgba(0,0,0,.16) !important;
+}
+#rsvp-note.rsvp-gift-style-section .eyebrow {
+  color:#9ca785 !important;
+  font-family:Montserrat,Arial,sans-serif !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  text-transform:uppercase !important;
+  letter-spacing:.34em !important;
+  margin-bottom:18px !important;
+}
+#rsvp-note.rsvp-gift-style-section h2 {
+  font-family:'Playfair Display',Georgia,serif !important;
+  color:#050505 !important;
+  text-transform:uppercase !important;
+  font-size:clamp(38px,6vw,78px) !important;
+  line-height:1.02 !important;
+  margin:0 0 32px !important;
+  font-weight:900 !important;
+}
+#rsvp-note.rsvp-gift-style-section p {
+  font-family:Montserrat,Arial,sans-serif !important;
+  color:#111 !important;
+  font-size:clamp(15px,1.35vw,19px) !important;
+  line-height:1.75 !important;
+  font-weight:500 !important;
+  text-align:center !important;
+  max-width:900px !important;
+  margin:0 auto 18px !important;
+}
+#rsvp-note.rsvp-gift-style-section .rsvp-rate-lines {
+  margin:6px auto 24px !important;
+}
+#rsvp-note.rsvp-gift-style-section .rsvp-rate-lines p {
+  margin-bottom:4px !important;
+  font-weight:600 !important;
+}
+#rsvp-note.rsvp-gift-style-section .rsvp-note-signoff {
+  font-family:'Great Vibes',cursive !important;
+  color:#9ca785 !important;
+  font-size:clamp(38px,5.5vw,64px) !important;
+  line-height:1.08 !important;
+  margin-top:30px !important;
+}
+@media(max-width:760px){
+  #rsvp-note.rsvp-gift-style-section {
+    padding:60px 14px !important;
+  }
+  #rsvp-note.rsvp-gift-style-section .rsvp-note-card {
+    padding:42px 20px !important;
+  }
+}
