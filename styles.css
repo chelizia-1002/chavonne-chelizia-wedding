@@ -456,3 +456,22 @@ width:min(1100px,98vw)!important;
 display:block!important;
 margin:0 auto!important;
 }
+
+
+/* HERO REVERT TO ORIGINAL DARK CINEMATIC LOOK */
+.hero::before,
+.hero-overlay{
+    background: rgba(0,0,0,0.45) !important;
+}
+.hero video,
+.hero-video{
+    filter: brightness(0.55) contrast(1.15) saturate(0.9) !important;
+}
+.hero h1,
+.hero-title{
+    color:#ffffff !important;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.55) !important;
+}
+.hero .ampersand{
+    color:#a8b08a !important;
+}
