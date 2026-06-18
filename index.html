@@ -171,6 +171,170 @@ html body .hero a.btn {
 }
 </style>
 
+
+<style id="direct-rsvp-palette-fix">
+/* ONLY changed sections: RSVP note and Wedding Palette */
+
+/* RSVP note design */
+#rsvp-note.rsvp-note-designed{
+  position:relative!important;
+  overflow:hidden!important;
+  background:
+    radial-gradient(circle at 8% 28%, rgba(156,167,133,.18), transparent 7%),
+    radial-gradient(circle at 92% 72%, rgba(156,167,133,.16), transparent 7%),
+    linear-gradient(180deg,#f7f4ed 0%,#eee8dc 100%)!important;
+  color:#111!important;
+  text-align:center!important;
+  padding:110px 18px 120px!important;
+}
+#rsvp-note.rsvp-note-designed::before,
+#rsvp-note.rsvp-note-designed::after{
+  content:""!important;
+  position:absolute!important;
+  bottom:-28px!important;
+  width:480px!important;
+  height:210px!important;
+  pointer-events:none!important;
+  opacity:.72!important;
+  background:
+    radial-gradient(ellipse at 18% 78%, rgba(156,167,133,.32) 0 12%, transparent 13%),
+    radial-gradient(ellipse at 42% 82%, rgba(255,255,255,.82) 0 15%, transparent 16%),
+    radial-gradient(ellipse at 66% 76%, rgba(156,167,133,.28) 0 11%, transparent 12%),
+    linear-gradient(18deg, transparent 0 48%, rgba(156,167,133,.22) 49% 51%, transparent 52%);
+}
+#rsvp-note.rsvp-note-designed::before{left:-100px!important}
+#rsvp-note.rsvp-note-designed::after{right:-100px!important;transform:scaleX(-1)!important}
+#rsvp-note.rsvp-note-designed .rsvp-note-card{
+  position:relative!important;
+  z-index:2!important;
+  max-width:1060px!important;
+  margin:0 auto!important;
+  padding:64px clamp(26px,6vw,88px)!important;
+  background:rgba(255,255,255,.96)!important;
+  color:#111!important;
+  border:1px solid rgba(0,0,0,.12)!important;
+  box-shadow:0 28px 85px rgba(0,0,0,.18)!important;
+}
+#rsvp-note.rsvp-note-designed .eyebrow{
+  color:#9ca785!important;
+  font-family:Montserrat,Arial,sans-serif!important;
+  font-weight:800!important;
+  text-transform:uppercase!important;
+  letter-spacing:.34em!important;
+  font-size:13px!important;
+  margin-bottom:18px!important;
+}
+#rsvp-note.rsvp-note-designed h2{
+  font-family:'Playfair Display',Georgia,serif!important;
+  color:#050505!important;
+  text-transform:uppercase!important;
+  font-size:clamp(42px,6.4vw,82px)!important;
+  line-height:1!important;
+  margin:0 0 34px!important;
+  font-weight:900!important;
+}
+#rsvp-note.rsvp-note-designed p,
+#rsvp-note.rsvp-note-designed li{
+  font-family:Montserrat,Arial,sans-serif!important;
+  color:#111!important;
+  font-size:clamp(15px,1.35vw,19px)!important;
+  line-height:1.78!important;
+  font-weight:500!important;
+  text-align:center!important;
+}
+#rsvp-note.rsvp-note-designed ul{
+  list-style-position:inside!important;
+  padding-left:0!important;
+  margin:12px auto 24px!important;
+}
+#rsvp-note.rsvp-note-designed .rsvp-note-signoff{
+  font-family:'Great Vibes',cursive!important;
+  color:#9ca785!important;
+  font-size:clamp(38px,5.6vw,66px)!important;
+  line-height:1.08!important;
+  margin-top:32px!important;
+}
+
+/* Wedding Palette design */
+#wedding-palette.palette-designed{
+  position:relative!important;
+  overflow:hidden!important;
+  min-height:100vh!important;
+  padding:92px 18px 110px!important;
+  text-align:center!important;
+  background:
+    radial-gradient(circle at 4% 34%, rgba(255,255,255,.16), transparent 4%),
+    radial-gradient(circle at 91% 72%, rgba(255,255,255,.15), transparent 4%),
+    linear-gradient(180deg,#9b7d82 0%, #9a7b81 100%)!important;
+  color:#eef3d4!important;
+}
+#wedding-palette.palette-designed::after{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:260px!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(ellipse at 8% 90%, rgba(255,255,255,.72) 0 7%, transparent 8%),
+    radial-gradient(ellipse at 20% 92%, rgba(156,167,133,.45) 0 7%, transparent 8%),
+    radial-gradient(ellipse at 80% 92%, rgba(156,167,133,.45) 0 7%, transparent 8%),
+    linear-gradient(0deg, rgba(218,226,210,.58), transparent 72%)!important;
+  opacity:.9!important;
+}
+#wedding-palette .palette-designed-inner{
+  position:relative!important;
+  z-index:2!important;
+  max-width:1180px!important;
+  margin:0 auto!important;
+}
+#wedding-palette .eyebrow{
+  color:#e5edc7!important;
+  font-family:Montserrat,Arial,sans-serif!important;
+  font-weight:800!important;
+  text-transform:uppercase!important;
+  letter-spacing:.34em!important;
+  font-size:13px!important;
+  margin-bottom:18px!important;
+}
+#wedding-palette h2{
+  font-family:'Playfair Display',Georgia,serif!important;
+  color:#eef3d4!important;
+  text-transform:uppercase!important;
+  font-size:clamp(46px,7vw,92px)!important;
+  line-height:1.05!important;
+  margin:0!important;
+  font-weight:900!important;
+  text-shadow:0 7px 28px rgba(0,0,0,.14)!important;
+}
+#wedding-palette p{
+  color:#eef3d4!important;
+  font-family:Montserrat,Arial,sans-serif!important;
+  font-size:clamp(16px,1.5vw,22px)!important;
+  font-weight:650!important;
+  margin:30px auto 48px!important;
+}
+#wedding-palette .palette-full-design{
+  display:block!important;
+  width:min(980px,92vw)!important;
+  max-width:100%!important;
+  height:auto!important;
+  margin:0 auto!important;
+  border:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+@media(max-width:760px){
+  #rsvp-note.rsvp-note-designed{padding:74px 14px 90px!important}
+  #rsvp-note.rsvp-note-designed .rsvp-note-card{padding:42px 20px!important}
+  #rsvp-note.rsvp-note-designed::before,
+  #rsvp-note.rsvp-note-designed::after{width:280px!important;height:150px!important;opacity:.48!important}
+  #wedding-palette.palette-designed{min-height:auto!important;padding:70px 14px 86px!important}
+  #wedding-palette p{margin-bottom:28px!important}
+}
+</style>
+
 </head>
 <body>
   <div class="grain"></div>
@@ -399,17 +563,16 @@ html body .hero a.btn {
         <p>Please know that we are not asking for gifts—your presence on our big day is truly all we want! However, if you would still like to gift us with something, a monetary contribution would be warmly appreciated.</p>
       </div>
     </section>
-<section class="palette-section panel" id="palette">
-      <span class="botanical-line botanical-line-1" aria-hidden="true"></span>
-      <div class="section-head reveal">
-        <p class="eyebrow">Wedding Palette</p>
-        <h2>Black, sage green and white.</h2>
-        <p class="story-intro">These are the colours that inspired the look and feel of our day.</p>
-      </div>
-      <div class="palette-card reveal">
-        <img src="assets/photos/wedding-palette-rotated.png" alt="Wedding color palette" class="palette-image-final">
-      </div>
-    </section>
+
+<section id="wedding-palette" class="palette-section palette-designed">
+  <div class="palette-designed-inner">
+    <div class="eyebrow">Wedding Palette</div>
+    <h2>Black, Sage Green<br>and White.</h2>
+    <p>These are the colours that inspired the look and feel of our day.</p>
+    <img src="assets/photos/colour-pal-design.jpg" alt="Wedding Palette - black, sage green and white" class="palette-full-design">
+  </div>
+</section>
+
 
 
 
@@ -417,9 +580,10 @@ html body .hero a.btn {
     
 
 
-<section id="rsvp-note" class="rsvp-note-section">
+
+<section id="rsvp-note" class="rsvp-note-section rsvp-note-designed">
   <div class="rsvp-note-card">
-    <div class="eyebrow">A Small RSVP Note</div>
+    <div class="eyebrow">Before You RSVP</div>
     <h2>A Small RSVP Note</h2>
     <p>We are so excited to celebrate our wedding with the people who have been part of our journey and are grateful that you will be sharing this special day with us.</p>
     <p>To help us manage our venue capacity and catering arrangements, each invitation is intended for one guest, unless alternative arrangements have been discussed with us beforehand.</p>
@@ -433,6 +597,7 @@ html body .hero a.btn {
     <p class="rsvp-note-signoff">With love,<br>Chavonne &amp; Chelizia</p>
   </div>
 </section>
+
 
 
 
