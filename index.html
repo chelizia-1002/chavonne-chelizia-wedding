@@ -40,171 +40,83 @@
 
 
 
-<style id="restore-forever-photos">
+
+
+
+<style id="verified-5-changes-final">
 html,body{max-width:100%!important;overflow-x:hidden!important}
-img{max-width:100%;}
+*{box-sizing:border-box!important}
+img{max-width:100%;height:auto}
 
-/* 1. Centre all images properly on mobile */
+/* Mobile centering / responsive polish */
 @media (max-width:760px){
-  img, figure img, .gallery img, .story-grid img, .photo-frame img, .story-frame img{
-    display:block!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-    object-position:center center!important;
+  body,section,.section-inner,.container{text-align:center!important}
+  section{padding-left:16px!important;padding-right:16px!important}
+  img,figure img,.gallery img,.story-grid img,.photo-frame img,.story-frame img,.story-card img,.polaroid img{
+    display:block!important;margin-left:auto!important;margin-right:auto!important;object-position:center center!important
   }
-  figure,.photo-frame,.story-frame,.gallery-card,.story-card{
-    margin-left:auto!important;
-    margin-right:auto!important;
+  figure,.photo-frame,.story-frame,.gallery-card,.story-card,.card,.section-inner,.container,.split>*,.details-grid>*{
+    margin-left:auto!important;margin-right:auto!important
+  }
+  .split,.story-grid,.gallery-grid,.details-grid{
+    display:grid!important;grid-template-columns:1fr!important;justify-items:center!important;align-items:center!important
+  }
+  h1,h2,h3,p{max-width:100%!important}
+}
+
+/* Hero background video: keep existing layout, force mobile playback/display */
+.hero,header.hero,section.hero{position:relative!important;overflow:hidden!important}
+.hero video,.hero .video-bg,.hero-video,.hero-mobile-bg{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:center center!important;z-index:0!important;
+  display:block!important;pointer-events:none!important
+}
+.hero>*:not(video):not(.video-bg):not(.hero-video):not(.hero-mobile-bg){position:relative;z-index:2}
+@media (max-width:760px){
+  .hero video,.hero .video-bg,.hero-video,.hero-mobile-bg{
+    display:block!important;opacity:.92!important;filter:grayscale(.08) brightness(.78) contrast(1.08)!important
   }
 }
 
-/* 2. Restore Our Forever Began section photo composition */
-#story{
-  position:relative!important;
-  background:#050505!important;
-  background-image:
-    radial-gradient(circle at 8% 46%, rgba(185,202,154,.14), transparent 9%),
-    radial-gradient(circle at 94% 70%, rgba(185,202,154,.14), transparent 9%),
-    linear-gradient(90deg,#050505 0%,#060606 100%)!important;
-  color:#fff!important;
-  overflow:hidden!important;
+/* Nature videos are backgrounds only inside sections */
+.video-section{position:relative!important;overflow:hidden!important;background:#050505!important}
+.video-section .section-video-bg{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:center center!important;z-index:0!important;
+  opacity:.55!important;filter:grayscale(.08) brightness(.75) contrast(1.08)!important;pointer-events:none!important
 }
+.video-section .section-soft-overlay{
+  position:absolute!important;inset:0!important;z-index:1!important;
+  background:linear-gradient(180deg,rgba(5,5,5,.48),rgba(5,5,5,.64))!important;pointer-events:none!important
+}
+.video-section>*:not(.section-video-bg):not(.section-soft-overlay){position:relative!important;z-index:2!important}
 
-#story .split{
-  display:grid!important;
-  grid-template-columns:minmax(420px, .9fr) minmax(520px, 1fr)!important;
-  gap:56px!important;
-  align-items:center!important;
-}
+/* Hide accidental standalone video bands if any remain */
+section.video-only,.nature-break,.video-break{display:none!important}
 
-#story .forever-photos-restored{
-  position:relative!important;
-  width:100%!important;
-  height:min(72vh,680px)!important;
-  min-height:520px!important;
-  display:block!important;
-  z-index:2!important;
+/* Color palette image */
+.palette-image-final{
+  width:min(980px,96vw)!important;height:auto!important;display:block!important;margin:0 auto!important
 }
+#palette,#wedding-palette,.palette-section{text-align:center!important}
 
-#story .forever-frame{
-  position:absolute!important;
-  margin:0!important;
-  overflow:hidden!important;
-  border:1px solid rgba(255,255,255,.23)!important;
-  background:rgba(0,0,0,.3)!important;
-  box-shadow:0 24px 70px rgba(0,0,0,.38)!important;
-}
-
-#story .forever-frame img{
-  width:100%!important;
-  height:100%!important;
-  display:block!important;
-  object-fit:cover!important;
-  object-position:center center!important;
-  filter:grayscale(100%) contrast(1.05)!important;
-}
-
-#story .forever-frame-back{
-  width:48%!important;
-  height:76%!important;
-  right:0!important;
-  top:0!important;
-  z-index:1!important;
-}
-
-#story .forever-frame-front{
-  width:68%!important;
-  height:66%!important;
-  left:0!important;
-  bottom:0!important;
-  z-index:2!important;
-}
-
-/* Hide any older broken empty line/frame holders */
-#story .overlap-photos,
-#story .photo-composition,
-#story .photo-stack,
-#story .story-photos{
-  display:none!important;
-}
-
-/* White and sage C&C logo */
-.cc-white{color:#fff!important;-webkit-text-fill-color:#fff!important}
-.cc-green{color:#b9ca9a!important;-webkit-text-fill-color:#b9ca9a!important}
-#story .script,#story .story-logo,#story .lower-logo,#story .logo-large{
-  color:#fff!important;
-  -webkit-text-fill-color:#fff!important;
-}
-#story .cc-green,.script .cc-green,.story-logo .cc-green{
-  color:#b9ca9a!important;
-  -webkit-text-fill-color:#b9ca9a!important;
-}
-
-/* RSVP note text box retained */
+/* RSVP note remains in gift-style box */
 #rsvp-note.rsvp-note-section,.rsvp-note-section{
-  background:linear-gradient(180deg,#f4f1e9 0%,#eee9df 100%)!important;
-  color:#111!important;
-  padding:90px 18px!important;
-  text-align:center!important;
+  background:linear-gradient(180deg,#f4f1e9 0%,#eee9df 100%)!important;color:#111!important;
+  padding:90px 18px!important;text-align:center!important
 }
 #rsvp-note .rsvp-note-card,.rsvp-note-card{
-  max-width:1080px!important;
-  margin:0 auto!important;
-  padding:56px clamp(24px,6vw,86px)!important;
-  background:#fff!important;
-  color:#111!important;
-  border:1px solid rgba(0,0,0,.12)!important;
-  box-shadow:0 22px 65px rgba(0,0,0,.16)!important;
+  max-width:1080px!important;margin:0 auto!important;padding:56px clamp(24px,6vw,86px)!important;
+  background:#fff!important;color:#111!important;border:1px solid rgba(0,0,0,.12)!important;
+  box-shadow:0 22px 65px rgba(0,0,0,.16)!important
 }
-#rsvp-note h2,.rsvp-note-card h2{
-  font-family:'Playfair Display',Georgia,serif!important;
-  color:#050505!important;
-  text-transform:uppercase!important;
-  font-size:clamp(38px,6vw,78px)!important;
-}
-#rsvp-note p,#rsvp-note li,.rsvp-note-card p,.rsvp-note-card li{
-  color:#111!important;
-  font-family:Montserrat,Arial,sans-serif!important;
-  font-size:clamp(16px,1.45vw,20px)!important;
-  line-height:1.78!important;
-  text-align:center!important;
-}
-#rsvp-note ul,.rsvp-note-card ul{
-  list-style-position:inside!important;
-  padding-left:0!important;
-}
-.rsvp-note-signoff{
-  font-family:'Great Vibes',cursive!important;
-  color:#9ca785!important;
-  font-size:clamp(38px,5.5vw,64px)!important;
-  line-height:1.08!important;
-}
+#rsvp-note h2,.rsvp-note-card h2{color:#050505!important}
+#rsvp-note p,#rsvp-note li,.rsvp-note-card p,.rsvp-note-card li{color:#111!important;text-align:center!important}
+#rsvp-note ul,.rsvp-note-card ul{list-style-position:inside!important;padding-left:0!important}
 
-@media (max-width:980px){
-  #story .split{
-    grid-template-columns:1fr!important;
-    gap:34px!important;
-  }
-  #story .forever-photos-restored{
-    height:auto!important;
-    min-height:0!important;
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:14px!important;
-  }
-  #story .forever-frame{
-    position:relative!important;
-    inset:auto!important;
-    width:100%!important;
-    height:auto!important;
-    aspect-ratio:4/5!important;
-  }
-}
-@media (max-width:560px){
-  #story .forever-photos-restored{
-    grid-template-columns:1fr!important;
-  }
-}
+/* Fix button/scroll overlap */
+.hero .scroll,.hero .scroll-down,.hero [class*="scroll"]{display:none!important}
+.btns,.hero-actions{gap:14px!important;flex-wrap:wrap!important}
 </style>
 
 </head>
@@ -281,12 +193,12 @@ img{max-width:100%;}
 
 
     <section class="our-story panel video-section" id="love-story">
-      <video class="section-video-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <video class="section-video-bg" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true">
         <source src="assets/videos/nature-1.mp4" type="video/mp4">
       </video>
       <div class="section-soft-overlay"></div>
 
-      <video class="nature-video video-bg story-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+<video class="nature-video video-bg story-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
         <source src="assets/videos/nature-2.mp4" type="video/mp4">
       </video>
       <div class="section-head reveal">
@@ -384,12 +296,12 @@ img{max-width:100%;}
     </section>
 
     <section class="accommodation panel video-section" id="accommodation">
-      <video class="section-video-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <video class="section-video-bg" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true">
         <source src="assets/videos/nature-2.mp4" type="video/mp4">
       </video>
       <div class="section-soft-overlay"></div>
 
-      <video class="nature-video video-bg stay-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+<video class="nature-video video-bg stay-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
         <source src="assets/videos/nature-2.mp4" type="video/mp4">
       </video>
       <div class="soft-dark-overlay" aria-hidden="true"></div>
@@ -443,7 +355,7 @@ img{max-width:100%;}
         <p class="story-intro">These are the colours that inspired the look and feel of our day.</p>
       </div>
       <div class="palette-card reveal">
-        <img src="assets/photos/wedding-palette-final.png" alt="Wedding color palette" class="palette-image-final">
+        <img src="assets/photos/color-palette-final.png" alt="Wedding color palette" class="palette-image-final">
       </div>
     </section>
 
@@ -451,6 +363,7 @@ img{max-width:100%;}
 
 
     
+
 
 <section id="rsvp-note" class="rsvp-note-section">
   <div class="rsvp-note-card">
@@ -468,6 +381,7 @@ img{max-width:100%;}
     <p class="rsvp-note-signoff">With love,<br>Chavonne &amp; Chelizia</p>
   </div>
 </section>
+
 
 
 <section class="rsvp panel" id="rsvp">
