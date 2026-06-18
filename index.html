@@ -43,80 +43,132 @@
 
 
 
-<style id="verified-5-changes-final">
-html,body{max-width:100%!important;overflow-x:hidden!important}
-*{box-sizing:border-box!important}
-img{max-width:100%;height:auto}
 
-/* Mobile centering / responsive polish */
-@media (max-width:760px){
-  body,section,.section-inner,.container{text-align:center!important}
-  section{padding-left:16px!important;padding-right:16px!important}
-  img,figure img,.gallery img,.story-grid img,.photo-frame img,.story-frame img,.story-card img,.polaroid img{
-    display:block!important;margin-left:auto!important;margin-right:auto!important;object-position:center center!important
+
+
+<style id="hero-dark-original-final">
+/* FINAL HERO ONLY: return to darker original colour/style */
+html body header.hero,
+html body section.hero,
+html body .hero {
+  background:#030303 !important;
+  background-color:#030303 !important;
+  color:#fff !important;
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+/* Remove the warm / beige wash on the hero video only */
+html body header.hero video,
+html body section.hero video,
+html body .hero video,
+html body header.hero .video-bg,
+html body section.hero .video-bg,
+html body .hero .video-bg,
+html body header.hero .hero-video,
+html body section.hero .hero-video,
+html body .hero .hero-video,
+html body header.hero .hero-mobile-bg,
+html body section.hero .hero-mobile-bg,
+html body .hero .hero-mobile-bg {
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  z-index:0 !important;
+  display:block !important;
+  opacity:.62 !important;
+  filter:grayscale(18%) brightness(.42) contrast(1.42) saturate(.72) !important;
+  mix-blend-mode:normal !important;
+  pointer-events:none !important;
+}
+
+/* Dark cinematic vignette like the original */
+html body header.hero::before,
+html body section.hero::before,
+html body .hero::before {
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(0,0,0,.08) 0%, rgba(0,0,0,.26) 42%, rgba(0,0,0,.78) 100%),
+    linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.38) 48%, rgba(0,0,0,.88) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.68) 0%, rgba(0,0,0,.08) 40%, rgba(0,0,0,.72) 100%) !important;
+}
+
+/* Kill any beige/light overlay layer that is washing the hero out */
+html body header.hero .overlay,
+html body section.hero .overlay,
+html body .hero .overlay,
+html body header.hero .hero-soft-overlay,
+html body section.hero .hero-soft-overlay,
+html body .hero .hero-soft-overlay {
+  background:
+    radial-gradient(circle at 50% 46%, rgba(0,0,0,.04) 0%, rgba(0,0,0,.18) 38%, rgba(0,0,0,.66) 100%),
+    linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.22), rgba(0,0,0,.82)) !important;
+  opacity:1 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+
+/* Keep all actual hero content above the darker overlay */
+html body header.hero > *:not(video):not(.video-bg):not(.hero-video):not(.hero-mobile-bg):not(.overlay):not(.hero-soft-overlay),
+html body section.hero > *:not(video):not(.video-bg):not(.hero-video):not(.hero-mobile-bg):not(.overlay):not(.hero-soft-overlay),
+html body .hero > *:not(video):not(.video-bg):not(.hero-video):not(.hero-mobile-bg):not(.overlay):not(.hero-soft-overlay) {
+  position:relative !important;
+  z-index:3 !important;
+}
+
+/* Bright original-style hero text */
+html body .hero h1,
+html body .hero .names,
+html body .hero .hero-title,
+html body .hero .title,
+html body .hero .subtitle,
+html body .hero p,
+html body .hero .date,
+html body .hero .kicker,
+html body .hero .dark,
+html body .hero .tagline {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+  text-shadow:0 10px 34px rgba(0,0,0,.95), 0 2px 8px rgba(0,0,0,.9) !important;
+}
+
+/* Sage ampersand must remain visible */
+html body .hero .amp,
+html body .hero .ampersand,
+html body .hero span[class*="green"],
+html body .hero span[class*="sage"],
+html body .hero .cc-green {
+  color:#b9ca9a !important;
+  -webkit-text-fill-color:#b9ca9a !important;
+  opacity:1 !important;
+  text-shadow:0 0 22px rgba(185,202,154,.32),0 8px 24px rgba(0,0,0,.95) !important;
+}
+
+/* Buttons remain visible */
+html body .hero .btn,
+html body .hero a.btn {
+  position:relative !important;
+  z-index:4 !important;
+}
+
+/* Mobile hero: keep dark original treatment */
+@media (max-width:760px) {
+  html body .hero video,
+  html body .hero .video-bg,
+  html body .hero .hero-video,
+  html body .hero .hero-mobile-bg {
+    opacity:.66 !important;
+    filter:grayscale(18%) brightness(.44) contrast(1.38) saturate(.72) !important;
   }
-  figure,.photo-frame,.story-frame,.gallery-card,.story-card,.card,.section-inner,.container,.split>*,.details-grid>*{
-    margin-left:auto!important;margin-right:auto!important
-  }
-  .split,.story-grid,.gallery-grid,.details-grid{
-    display:grid!important;grid-template-columns:1fr!important;justify-items:center!important;align-items:center!important
-  }
-  h1,h2,h3,p{max-width:100%!important}
 }
-
-/* Hero background video: keep existing layout, force mobile playback/display */
-.hero,header.hero,section.hero{position:relative!important;overflow:hidden!important}
-.hero video,.hero .video-bg,.hero-video,.hero-mobile-bg{
-  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
-  object-fit:cover!important;object-position:center center!important;z-index:0!important;
-  display:block!important;pointer-events:none!important
-}
-.hero>*:not(video):not(.video-bg):not(.hero-video):not(.hero-mobile-bg){position:relative;z-index:2}
-@media (max-width:760px){
-  .hero video,.hero .video-bg,.hero-video,.hero-mobile-bg{
-    display:block!important;opacity:.92!important;filter:grayscale(.08) brightness(.78) contrast(1.08)!important
-  }
-}
-
-/* Nature videos are backgrounds only inside sections */
-.video-section{position:relative!important;overflow:hidden!important;background:#050505!important}
-.video-section .section-video-bg{
-  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
-  object-fit:cover!important;object-position:center center!important;z-index:0!important;
-  opacity:.55!important;filter:grayscale(.08) brightness(.75) contrast(1.08)!important;pointer-events:none!important
-}
-.video-section .section-soft-overlay{
-  position:absolute!important;inset:0!important;z-index:1!important;
-  background:linear-gradient(180deg,rgba(5,5,5,.48),rgba(5,5,5,.64))!important;pointer-events:none!important
-}
-.video-section>*:not(.section-video-bg):not(.section-soft-overlay){position:relative!important;z-index:2!important}
-
-/* Hide accidental standalone video bands if any remain */
-section.video-only,.nature-break,.video-break{display:none!important}
-
-/* Color palette image */
-.palette-image-final{
-  width:min(980px,96vw)!important;height:auto!important;display:block!important;margin:0 auto!important
-}
-#palette,#wedding-palette,.palette-section{text-align:center!important}
-
-/* RSVP note remains in gift-style box */
-#rsvp-note.rsvp-note-section,.rsvp-note-section{
-  background:linear-gradient(180deg,#f4f1e9 0%,#eee9df 100%)!important;color:#111!important;
-  padding:90px 18px!important;text-align:center!important
-}
-#rsvp-note .rsvp-note-card,.rsvp-note-card{
-  max-width:1080px!important;margin:0 auto!important;padding:56px clamp(24px,6vw,86px)!important;
-  background:#fff!important;color:#111!important;border:1px solid rgba(0,0,0,.12)!important;
-  box-shadow:0 22px 65px rgba(0,0,0,.16)!important
-}
-#rsvp-note h2,.rsvp-note-card h2{color:#050505!important}
-#rsvp-note p,#rsvp-note li,.rsvp-note-card p,.rsvp-note-card li{color:#111!important;text-align:center!important}
-#rsvp-note ul,.rsvp-note-card ul{list-style-position:inside!important;padding-left:0!important}
-
-/* Fix button/scroll overlap */
-.hero .scroll,.hero .scroll-down,.hero [class*="scroll"]{display:none!important}
-.btns,.hero-actions{gap:14px!important;flex-wrap:wrap!important}
 </style>
 
 </head>
